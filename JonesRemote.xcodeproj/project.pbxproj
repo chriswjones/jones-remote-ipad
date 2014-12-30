@@ -345,9 +345,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A41691C6A702968C786E35F /* JonesRemote */ = {
+		5A41691C6A702968C786E35F /* Jones Remote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "JonesRemote" */;
+			buildConfigurationList = 5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "Jones Remote" */;
 			buildPhases = (
 				BDB67BBBB903CA6CF07D638C /* Check Pods Manifest.lock */,
 				5A41646281EC930A30145A58 /* Sources */,
@@ -359,7 +359,7 @@
 			);
 			dependencies = (
 			);
-			name = JonesRemote;
+			name = "Jones Remote";
 			productName = JonesRemote;
 			productReference = 5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */;
 			productType = "com.apple.product-type.application";
@@ -407,7 +407,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5A41691C6A702968C786E35F /* JonesRemote */,
+				5A41691C6A702968C786E35F /* Jones Remote */,
 				5A416B68211D43360E760625 /* JonesRemoteTests */,
 			);
 		};
@@ -507,7 +507,7 @@
 /* Begin PBXTargetDependency section */
 		5A416F9E5520B9A7B2961A8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5A41691C6A702968C786E35F /* JonesRemote */;
+			target = 5A41691C6A702968C786E35F /* Jones Remote */;
 			targetProxy = 5A41698EED3A65AAA5FB92DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "JonesRemote" */ = {
+		5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "Jones Remote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A416564B25102D6B1A67178 /* Debug */,
