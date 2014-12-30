@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AEB3A094490A9022E8BCA7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3761C5519A0D6DADEFF2DB /* libPods.a */; };
+		5A416003B0C5DE4C538334E9 /* BluRay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E9CC990EA70DB4A02D0 /* BluRay.m */; };
+		5A4161267C26AC0945BE321A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A41687DB6AD7C582A9F097A /* LaunchScreen.xib */; };
+		5A416187D77249126AF2B60E /* ShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4167BE7F1A3ED66AF8E9A7 /* ShellViewController.m */; };
+		5A41624ABD3FF45E31FD7C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4166FFACDA5D992F52087E /* Main.storyboard */; };
+		5A416305A659650DBFBD66F5 /* TimeWarnerDVR.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41621284F8AF6A9BC77AF1 /* TimeWarnerDVR.m */; };
+		5A416429C913F6DDCAEDD9F0 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4163289CCCF8382788DD08 /* Scene.m */; };
+		5A416519876CC4904A150D4F /* HeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */; };
+		5A41663CE7A7883AB013A10B /* DirecTvRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */; };
+		5A4166C35F46BF99292D97E9 /* RemoteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4168D43E0EB8D91E11A816 /* RemoteButton.m */; };
+		5A4167ADF2E2714110A38A7F /* JonesRemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416D8B7395A59A4AE50BC2 /* JonesRemoteTests.m */; };
+		5A4169BF5A53AF07C48DC7D7 /* TimeWarnerRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416CDFF7126C921B94DDBC /* TimeWarnerRemoteViewController.m */; };
+		5A416A10E60B722CE1BC5790 /* DirecTvBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */; };
+		5A416A66FCE3EBD77C152732 /* RemotePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4169DA4B5A31005EBD192C /* RemotePanel.m */; };
+		5A416A6EF276E345B5D2B1B8 /* DirecTvDvr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416F15807FB26B1609A334 /* DirecTvDvr.m */; };
+		5A416AA9F69582AF302E3629 /* PanasonicPlasmaTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4169215A6660CF4D0DE845 /* PanasonicPlasmaTV.m */; };
+		5A416C5FD16D35F0D23B9CF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4164E962D9DD9019B3C105 /* AppDelegate.m */; };
+		5A416C78091AB581E348EFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A416B7A1E524A9552942F00 /* Images.xcassets */; };
+		5A416D3709C56674C463EB19 /* CommandCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416AC32360087937E12417 /* CommandCenter.m */; };
+		5A416D6E883FACCA718F994C /* FavoriteChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41613F30A6B1866CD27CE2 /* FavoriteChannel.m */; };
+		5A416DB51EF241FB06EC5D70 /* TvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41653D2CABFFE7CD85EB9F /* TvViewController.m */; };
+		5A416DE1F2B13930585AC79E /* FooterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41610A534C4FB1BD8230ED /* FooterViewController.m */; };
+		5A416DFD366056F329E664A8 /* Marantz.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416D5B58F8CBA7211B1AEB /* Marantz.m */; };
+		5A416E7D5DC09049CABF9380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41625D3ED3C26E31F7F03B /* main.m */; };
+		5A416F30866E5338A1110A4B /* BluRayRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A41698EED3A65AAA5FB92DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A416945C07CB4EDD8E802AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A41691C6A702968C786E35F;
+			remoteInfo = JonesRemote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewController.m; sourceTree = "<group>"; };
+		5A41606294FB42E14C6618AA /* IREnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IREnum.h; sourceTree = "<group>"; };
+		5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvBox.m; sourceTree = "<group>"; };
+		5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JonesRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4160B5CC083156AE83AB4B /* BluRay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluRay.h; sourceTree = "<group>"; };
+		5A4160F0AF190FC482C12A4D /* FooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterViewController.h; sourceTree = "<group>"; };
+		5A41610A534C4FB1BD8230ED /* FooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterViewController.m; sourceTree = "<group>"; };
+		5A41613F30A6B1866CD27CE2 /* FavoriteChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteChannel.m; sourceTree = "<group>"; };
+		5A416149AC7C9498D5379C62 /* IRHardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRHardware.h; sourceTree = "<group>"; };
+		5A416152D11DEF7A75F60B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		5A4161A9F602D93F2501193A /* Marantz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marantz.h; sourceTree = "<group>"; };
+		5A41621284F8AF6A9BC77AF1 /* TimeWarnerDVR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeWarnerDVR.m; sourceTree = "<group>"; };
+		5A41625D3ED3C26E31F7F03B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A4162C2B5665E28230B3483 /* HeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewController.h; sourceTree = "<group>"; };
+		5A4163289CCCF8382788DD08 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		5A4164885B51C4F7820C131F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A4164D95D32D26B634A7763 /* JTLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTLSingleton.h; sourceTree = "<group>"; };
+		5A4164E962D9DD9019B3C105 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A41653D2CABFFE7CD85EB9F /* TvViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TvViewController.m; sourceTree = "<group>"; };
+		5A4165E7460403A70E5D1A81 /* RemoteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteButton.h; sourceTree = "<group>"; };
+		5A4167057E7A4ABE9FC26F9F /* HeaderViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewControllerDelegate.h; sourceTree = "<group>"; };
+		5A41676DA436D3CCE351060F /* DirecTvRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirecTvRemoteViewController.h; sourceTree = "<group>"; };
+		5A416773A03DFDC0AF9C0762 /* CommandCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandCenter.h; sourceTree = "<group>"; };
+		5A4167851E8310701AAB450B /* TimeWarnerDVR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeWarnerDVR.h; sourceTree = "<group>"; };
+		5A4167BE7F1A3ED66AF8E9A7 /* ShellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellViewController.m; sourceTree = "<group>"; };
+		5A4168D43E0EB8D91E11A816 /* RemoteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteButton.m; sourceTree = "<group>"; };
+		5A4168F1ECDA2A28B849EEC5 /* DirecTvDvr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirecTvDvr.h; sourceTree = "<group>"; };
+		5A4169215A6660CF4D0DE845 /* PanasonicPlasmaTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanasonicPlasmaTV.m; sourceTree = "<group>"; };
+		5A4169DA4B5A31005EBD192C /* RemotePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemotePanel.m; sourceTree = "<group>"; };
+		5A416A456FFFA370F1C97528 /* ShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellViewController.h; sourceTree = "<group>"; };
+		5A416A62F7344C101BC6E6D2 /* RemotePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemotePanel.h; sourceTree = "<group>"; };
+		5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JonesRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A416A76FE3F0FD4860DFCCF /* BluRayRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluRayRemoteViewController.h; sourceTree = "<group>"; };
+		5A416A84196A12CDB487ABE9 /* MatrixEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixEnum.h; sourceTree = "<group>"; };
+		5A416AC32360087937E12417 /* CommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandCenter.m; sourceTree = "<group>"; };
+		5A416AD64FC3F26F3E13B071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		5A416B7A1E524A9552942F00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A416BA8CE617A907B993C76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A416BCD7B923477C736092C /* TimeWarnerRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeWarnerRemoteViewController.h; sourceTree = "<group>"; };
+		5A416BF84F7186E9290365FB /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		5A416CDFF7126C921B94DDBC /* TimeWarnerRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeWarnerRemoteViewController.m; sourceTree = "<group>"; };
+		5A416D5B58F8CBA7211B1AEB /* Marantz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marantz.m; sourceTree = "<group>"; };
+		5A416D8B7395A59A4AE50BC2 /* JonesRemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JonesRemoteTests.m; sourceTree = "<group>"; };
+		5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluRayRemoteViewController.m; sourceTree = "<group>"; };
+		5A416E1A881DCC7E82D799CF /* FavoriteChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteChannel.h; sourceTree = "<group>"; };
+		5A416E9CC990EA70DB4A02D0 /* BluRay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluRay.m; sourceTree = "<group>"; };
+		5A416EC20BBA418B99B8ACC4 /* TvViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TvViewController.h; sourceTree = "<group>"; };
+		5A416EF3211346AC39A2D3E6 /* PanasonicPlasmaTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanasonicPlasmaTV.h; sourceTree = "<group>"; };
+		5A416F15807FB26B1609A334 /* DirecTvDvr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvDvr.m; sourceTree = "<group>"; };
+		5A416F18249816EE4DBF3682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5A416F1EC9B2769A1CC52B09 /* DirecTvBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirecTvBox.h; sourceTree = "<group>"; };
+		5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvRemoteViewController.m; sourceTree = "<group>"; };
+		93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FF3761C5519A0D6DADEFF2DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A4161075CD8E73FE4091E63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A41642F6A615D2CB30F8D71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AEB3A094490A9022E8BCA7B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A4161D069AD3895C0150BE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A416AD64FC3F26F3E13B071 /* Info.plist */,
+				5A41625D3ED3C26E31F7F03B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A41632E52DA83115449CF91 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				5A41610A534C4FB1BD8230ED /* FooterViewController.m */,
+				5A4160F0AF190FC482C12A4D /* FooterViewController.h */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		5A4164155D7C24056909E736 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */,
+				5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A41655041A88309CB6EF6D7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		5A416572DAF2315C107FC4CA /* JonesRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A416ADADCB4E2DF7731DC55 /* Supporting Files */,
+				5A416D8B7395A59A4AE50BC2 /* JonesRemoteTests.m */,
+			);
+			path = JonesRemoteTests;
+			sourceTree = "<group>";
+		};
+		5A4166D7637D406C9CBDF911 /* DirecTV */ = {
+			isa = PBXGroup;
+			children = (
+				5A41676DA436D3CCE351060F /* DirecTvRemoteViewController.h */,
+				5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */,
+			);
+			path = DirecTV;
+			sourceTree = "<group>";
+		};
+		5A4166DB84A255D7592F23D5 /* JonesRemote */ = {
+			isa = PBXGroup;
+			children = (
+				5A4161D069AD3895C0150BE3 /* Supporting Files */,
+				5A416B7A1E524A9552942F00 /* Images.xcassets */,
+				5A41687DB6AD7C582A9F097A /* LaunchScreen.xib */,
+				5A416BA8CE617A907B993C76 /* AppDelegate.h */,
+				5A4164E962D9DD9019B3C105 /* AppDelegate.m */,
+				5A4166FFACDA5D992F52087E /* Main.storyboard */,
+				5A41655041A88309CB6EF6D7 /* Vendor */,
+				5A41683B0C297E706B5395FE /* Data */,
+				5A416AD6C35B3ED5DBA3D06B /* CommandCenter */,
+				5A416A25043B8CA57F24983A /* UserInterface */,
+			);
+			path = JonesRemote;
+			sourceTree = "<group>";
+		};
+		5A4167D396D665F371B5CD2E /* TimeWarner */ = {
+			isa = PBXGroup;
+			children = (
+				5A416CDFF7126C921B94DDBC /* TimeWarnerRemoteViewController.m */,
+				5A416BCD7B923477C736092C /* TimeWarnerRemoteViewController.h */,
+			);
+			path = TimeWarner;
+			sourceTree = "<group>";
+		};
+		5A41683B0C297E706B5395FE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5A416E1A881DCC7E82D799CF /* FavoriteChannel.h */,
+				5A41613F30A6B1866CD27CE2 /* FavoriteChannel.m */,
+				5A4163289CCCF8382788DD08 /* Scene.m */,
+				5A416BF84F7186E9290365FB /* Scene.h */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5A4168D7D5AA40D3176DB419 /* BluRay */ = {
+			isa = PBXGroup;
+			children = (
+				5A416A76FE3F0FD4860DFCCF /* BluRayRemoteViewController.h */,
+				5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */,
+			);
+			path = BluRay;
+			sourceTree = "<group>";
+		};
+		5A416A25043B8CA57F24983A /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				5A416C2177EAA4981095398C /* controls */,
+				5A416C87B0ED8F70C37F5035 /* Remotes */,
+				5A416DA93E48F94524DAB894 /* Header */,
+				5A41632E52DA83115449CF91 /* Footer */,
+				5A416B8BCF38AA05B179C611 /* Shell */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		5A416AD6C35B3ED5DBA3D06B /* CommandCenter */ = {
+			isa = PBXGroup;
+			children = (
+				5A4164D95D32D26B634A7763 /* JTLSingleton.h */,
+				5A416A84196A12CDB487ABE9 /* MatrixEnum.h */,
+				5A416773A03DFDC0AF9C0762 /* CommandCenter.h */,
+				5A416AC32360087937E12417 /* CommandCenter.m */,
+				5A41606294FB42E14C6618AA /* IREnum.h */,
+				5A416149AC7C9498D5379C62 /* IRHardware.h */,
+				5A416DDB89E402593B3F1C8B /* IRDevices */,
+			);
+			path = CommandCenter;
+			sourceTree = "<group>";
+		};
+		5A416ADADCB4E2DF7731DC55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A416152D11DEF7A75F60B77 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A416B8BCF38AA05B179C611 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				5A416A456FFFA370F1C97528 /* ShellViewController.h */,
+				5A4167BE7F1A3ED66AF8E9A7 /* ShellViewController.m */,
+				5A41653D2CABFFE7CD85EB9F /* TvViewController.m */,
+				5A416EC20BBA418B99B8ACC4 /* TvViewController.h */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		5A416C2177EAA4981095398C /* controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controls;
+			sourceTree = "<group>";
+		};
+		5A416C87B0ED8F70C37F5035 /* Remotes */ = {
+			isa = PBXGroup;
+			children = (
+				5A4169DA4B5A31005EBD192C /* RemotePanel.m */,
+				5A416A62F7344C101BC6E6D2 /* RemotePanel.h */,
+				5A4168D43E0EB8D91E11A816 /* RemoteButton.m */,
+				5A4165E7460403A70E5D1A81 /* RemoteButton.h */,
+				5A4168D7D5AA40D3176DB419 /* BluRay */,
+				5A4167D396D665F371B5CD2E /* TimeWarner */,
+				5A4166D7637D406C9CBDF911 /* DirecTV */,
+			);
+			path = Remotes;
+			sourceTree = "<group>";
+		};
+		5A416DA93E48F94524DAB894 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */,
+				5A4162C2B5665E28230B3483 /* HeaderViewController.h */,
+				5A4167057E7A4ABE9FC26F9F /* HeaderViewControllerDelegate.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		5A416DDB89E402593B3F1C8B /* IRDevices */ = {
+			isa = PBXGroup;
+			children = (
+				5A4160B5CC083156AE83AB4B /* BluRay.h */,
+				5A416E9CC990EA70DB4A02D0 /* BluRay.m */,
+				5A4168F1ECDA2A28B849EEC5 /* DirecTvDvr.h */,
+				5A416F15807FB26B1609A334 /* DirecTvDvr.m */,
+				5A4161A9F602D93F2501193A /* Marantz.h */,
+				5A416D5B58F8CBA7211B1AEB /* Marantz.m */,
+				5A4167851E8310701AAB450B /* TimeWarnerDVR.h */,
+				5A41621284F8AF6A9BC77AF1 /* TimeWarnerDVR.m */,
+				5A416EF3211346AC39A2D3E6 /* PanasonicPlasmaTV.h */,
+				5A4169215A6660CF4D0DE845 /* PanasonicPlasmaTV.m */,
+				5A416F1EC9B2769A1CC52B09 /* DirecTvBox.h */,
+				5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */,
+			);
+			path = IRDevices;
+			sourceTree = "<group>";
+		};
+		5A416EF639E1070EE70E57FB = {
+			isa = PBXGroup;
+			children = (
+				5A4164155D7C24056909E736 /* Products */,
+				5A4166DB84A255D7592F23D5 /* JonesRemote */,
+				5A416572DAF2315C107FC4CA /* JonesRemoteTests */,
+				F06BF8215F7EB1BC9D4DADDB /* Pods */,
+				F04A9936525D72B626C9A67D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F04A9936525D72B626C9A67D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF3761C5519A0D6DADEFF2DB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F06BF8215F7EB1BC9D4DADDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */,
+				93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A41691C6A702968C786E35F /* JonesRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "JonesRemote" */;
+			buildPhases = (
+				BDB67BBBB903CA6CF07D638C /* Check Pods Manifest.lock */,
+				5A41646281EC930A30145A58 /* Sources */,
+				5A41642F6A615D2CB30F8D71 /* Frameworks */,
+				5A41690C92D6481C4003544B /* Resources */,
+				7CB5C4F2B830FC40055A560B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JonesRemote;
+			productName = JonesRemote;
+			productReference = 5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A416B68211D43360E760625 /* JonesRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A416573E095CADF4D9D65D3 /* Build configuration list for PBXNativeTarget "JonesRemoteTests" */;
+			buildPhases = (
+				5A416C6910DC21BEF74E022B /* Sources */,
+				5A4161075CD8E73FE4091E63 /* Frameworks */,
+				5A416F1B6783BF159F01306C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A416F9E5520B9A7B2961A8F /* PBXTargetDependency */,
+			);
+			name = JonesRemoteTests;
+			productName = JonesRemoteTests;
+			productReference = 5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A416945C07CB4EDD8E802AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Axis;
+				TargetAttributes = {
+					5A41691C6A702968C786E35F = {
+						DevelopmentTeam = R65G3N745T;
+					};
+				};
+			};
+			buildConfigurationList = 5A416C2D6E12AAC8BC04698B /* Build configuration list for PBXProject "JonesRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5A416EF639E1070EE70E57FB;
+			productRefGroup = 5A4164155D7C24056909E736 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A41691C6A702968C786E35F /* JonesRemote */,
+				5A416B68211D43360E760625 /* JonesRemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A41690C92D6481C4003544B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A416C78091AB581E348EFD7 /* Images.xcassets in Resources */,
+				5A4161267C26AC0945BE321A /* LaunchScreen.xib in Resources */,
+				5A41624ABD3FF45E31FD7C75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A416F1B6783BF159F01306C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CB5C4F2B830FC40055A560B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDB67BBBB903CA6CF07D638C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A41646281EC930A30145A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A416E7D5DC09049CABF9380 /* main.m in Sources */,
+				5A416C5FD16D35F0D23B9CF6 /* AppDelegate.m in Sources */,
+				5A416519876CC4904A150D4F /* HeaderViewController.m in Sources */,
+				5A416DE1F2B13930585AC79E /* FooterViewController.m in Sources */,
+				5A416187D77249126AF2B60E /* ShellViewController.m in Sources */,
+				5A416DB51EF241FB06EC5D70 /* TvViewController.m in Sources */,
+				5A416D3709C56674C463EB19 /* CommandCenter.m in Sources */,
+				5A416003B0C5DE4C538334E9 /* BluRay.m in Sources */,
+				5A416A6EF276E345B5D2B1B8 /* DirecTvDvr.m in Sources */,
+				5A416DFD366056F329E664A8 /* Marantz.m in Sources */,
+				5A416305A659650DBFBD66F5 /* TimeWarnerDVR.m in Sources */,
+				5A416AA9F69582AF302E3629 /* PanasonicPlasmaTV.m in Sources */,
+				5A416A66FCE3EBD77C152732 /* RemotePanel.m in Sources */,
+				5A4166C35F46BF99292D97E9 /* RemoteButton.m in Sources */,
+				5A416D6E883FACCA718F994C /* FavoriteChannel.m in Sources */,
+				5A416429C913F6DDCAEDD9F0 /* Scene.m in Sources */,
+				5A416F30866E5338A1110A4B /* BluRayRemoteViewController.m in Sources */,
+				5A416A10E60B722CE1BC5790 /* DirecTvBox.m in Sources */,
+				5A4169BF5A53AF07C48DC7D7 /* TimeWarnerRemoteViewController.m in Sources */,
+				5A41663CE7A7883AB013A10B /* DirecTvRemoteViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A416C6910DC21BEF74E022B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4167ADF2E2714110A38A7F /* JonesRemoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A416F9E5520B9A7B2961A8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A41691C6A702968C786E35F /* JonesRemote */;
+			targetProxy = 5A41698EED3A65AAA5FB92DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A4166FFACDA5D992F52087E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A4164885B51C4F7820C131F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A41687DB6AD7C582A9F097A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A416F18249816EE4DBF3682 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A41610D8F9B1B52FB7AB159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JonesRemote.app/JonesRemote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JonesRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		5A4161C407D1A691D3763B05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5A4163DF611315B20E4DE000 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JonesRemote.app/JonesRemote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JonesRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		5A4164429122F9454F31EC7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A416564B25102D6B1A67178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JonesRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		5A416A64253D22BB11132D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JonesRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A416573E095CADF4D9D65D3 /* Build configuration list for PBXNativeTarget "JonesRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A41610D8F9B1B52FB7AB159 /* Debug */,
+				5A4163DF611315B20E4DE000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A416C2D6E12AAC8BC04698B /* Build configuration list for PBXProject "JonesRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4161C407D1A691D3763B05 /* Debug */,
+				5A4164429122F9454F31EC7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "JonesRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A416564B25102D6B1A67178 /* Debug */,
+				5A416A64253D22BB11132D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A416945C07CB4EDD8E802AD /* Project object */;
+}
