@@ -14,11 +14,9 @@
 #import "Scene.h"
 #import "CommandCenter.h"
 
-static CGFloat scenesBtnWidth = 150.0;
 static CGFloat settingsBtnWidth = 150.0;
 
 @implementation HeaderViewController {
-    BFPaperButton *_scenes;
     BFPaperButton *_left;
     BFPaperButton *_center;
     BFPaperButton *_right;
@@ -101,15 +99,6 @@ static CGFloat settingsBtnWidth = 150.0;
 
     self.view.backgroundColor = _activeItemColor;
 
-    _scenes = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
-    _scenes.backgroundColor = _defaultItemColor;
-    _scenes.cornerRadius = 0.0;
-    _scenes.tapCircleDiameter = bfPaperButton_tapCircleDiameterSmall;
-    [_scenes setTitle:@"Scenes" forState:UIControlStateNormal];
-    [_scenes addTarget:self action:@selector(doScenes:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_scenes];
-
-
     _left = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
     _left.backgroundColor = _defaultItemColor;
     _left.cornerRadius = 0.0;
@@ -161,12 +150,9 @@ static CGFloat settingsBtnWidth = 150.0;
 
 - (void)viewDidLayoutSubviews {
     CGFloat statusBarHeight = 20.0;
-    CGFloat btnWidth = (self.view.bounds.size.width - settingsBtnWidth - scenesBtnWidth) / 3;
+    CGFloat btnWidth = (self.view.bounds.size.width - settingsBtnWidth) / 3;
     CGFloat btnHeight = self.view.bounds.size.height - 20.0;
     CGFloat xPosition = 0;
-
-    _scenes.frame = CGRectMake(xPosition, statusBarHeight, scenesBtnWidth, btnHeight);
-    xPosition += scenesBtnWidth;
 
     _left.frame = CGRectMake(xPosition, statusBarHeight, btnWidth, btnHeight);
     xPosition += btnWidth;
@@ -201,21 +187,6 @@ static CGFloat settingsBtnWidth = 150.0;
     }
 }
 
-- (void)doScenes:(UIButton *)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    [alert setModalPresentationStyle:UIModalPresentationPopover];
-    [alert popoverPresentationController].sourceView = sender;
-    [alert popoverPresentationController].sourceRect = sender.bounds;
-
-    for (Scene *s in _sceneData) {
-        [alert addAction:[UIAlertAction actionWithTitle:s.name style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [self doScene:s];
-        }]];
-    }
-
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
 - (void)doPower:(UIButton *)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     [alert setModalPresentationStyle:UIModalPresentationPopover];
@@ -229,11 +200,32 @@ static CGFloat settingsBtnWidth = 150.0;
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
 
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceDirecTvDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceDirecTvBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
+
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
         hud.labelText = @"Powering On";
         [NSTimer scheduledTimerWithTimeInterval:30.0
                                          target:self
                                        selector:@selector(finishPowerOn)
+                                       userInfo:nil
+                                        repeats:NO];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Power Music On" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] powerMatrixOn];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceMarantz];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceLeftTv];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
+
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
+        hud.labelText = @"Powering On";
+        [NSTimer scheduledTimerWithTimeInterval:30.0
+                                         target:self
+                                       selector:@selector(finishPowerMusicOn)
                                        userInfo:nil
                                         repeats:NO];
     }]];
@@ -252,6 +244,11 @@ static CGFloat settingsBtnWidth = 150.0;
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
 
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceDirecTvDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceDirecTvBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
+
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
         hud.labelText = @"Powering Off";
         [NSTimer scheduledTimerWithTimeInterval:15.0
@@ -266,82 +263,6 @@ static CGFloat settingsBtnWidth = 150.0;
     }]];
 
     [self presentViewController:alert animated:YES completion:nil];
-}
-
-- (void)doScene:(Scene *)scene {
-    [[CommandCenter singleton] setMatrixInput:InputDeviceNone toOutput:OutputDeviceAudioZone1];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceLeftTv];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
-
-    // Channels
-    if (scene.leftTvChannel && scene.leftTvChannel.length > 0) {
-        [self doChannel:scene.leftTvChannel input:scene.leftTvIr];
-    }
-
-    if (scene.centerTvChannel && scene.centerTvChannel.length > 0) {
-        [self doChannel:scene.rightTvChannel input:scene.centerTvIr];
-    }
-
-    if (scene.rightTvChannel && scene.rightTvChannel.length > 0) {
-        [self doChannel:scene.rightTvChannel input:scene.centerTvIr];
-    }
-
-    // audio first (set main zone to the center tv input)
-    [[CommandCenter singleton] setMatrixInput:scene.centerTvInput toOutput:OutputDeviceAudioZone1];
-
-    // matrix routing
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@(scene.leftTvInput) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
-    [[CommandCenter singleton] setMatrixInput:scene.leftTvInput toOutput:OutputDeviceLeftTv];
-    [defaults setObject:@(scene.centerTvInput) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
-    [[CommandCenter singleton] setMatrixInput:scene.centerTvInput toOutput:OutputDeviceCenterTv];
-    [defaults setObject:@(scene.rightTvInput) forKey:stringForOutputDevice(OutputDeviceRightTv)];
-    [[CommandCenter singleton] setMatrixInput:scene.rightTvInput toOutput:OutputDeviceRightTv];
-    [defaults synchronize];
-
-    // tv on off
-    if (scene.leftTvInput != InputDeviceNone) {
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceLeftTv];
-    }
-
-    if (scene.centerTvInput != InputDeviceNone) {
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceCenterTv];
-    }
-
-    if (scene.rightTvInput != InputDeviceNone) {
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceRightTv];
-    }
-
-    // reload the Tv view controller so if the inputs changed it will reflect the right remote
-    [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv];
-}
-
-- (void)doChannel:(NSString *)channel input:(enum IRDevice)inputDevice {
-    for (int i = 0; i < [channel length]; ++i) {
-        NSString *text = [NSString stringWithFormat:@"%c", [channel characterAtIndex:i]];
-        if ([text isEqualToString:@"0"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"1"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"2"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand2 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"3"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand3 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"4"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand4 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"5"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"6"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand6 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"7"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand7 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"8"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand8 toIRDevice:inputDevice];
-        } else if ([text isEqualToString:@"9"]) {
-            [[CommandCenter singleton] sendQueableIRCommand:IRCommand9 toIRDevice:inputDevice];
-        }
-    }
 }
 
 - (void)finishPowerOn {
@@ -377,6 +298,22 @@ static CGFloat settingsBtnWidth = 150.0;
     [MBProgressHUD hideHUDForView:self.parentViewController.view animated:YES];
 
 
+}
+
+- (void)finishPowerMusicOn {
+
+    // set center TV to dvr input
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
+    [defaults setObject:@(InputDeviceAppleTv) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
+    [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceRightTv)];
+    [defaults synchronize];
+
+    // Audio On
+    [[CommandCenter singleton] setMatrixInput:InputDeviceAppleTv toOutput:OutputDeviceAudioZone1];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceMarantz];
+    [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv];
+    [MBProgressHUD hideHUDForView:self.parentViewController.view animated:YES];
 }
 
 - (void)hideHUD {

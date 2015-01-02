@@ -3,7 +3,7 @@ NS_ENUM(int, OutputDevice) {
   OutputDeviceCenterTv,
   OutputDeviceRightTv,
   OutputDeviceAudioZone1,
-  OutputDeviceAudioZone2,
+  OutputDeviceAudioZoneHeadphones,
   OutputDeviceAudioZone3
 };
 
@@ -57,7 +57,7 @@ static inline NSData *matrixCommandDataForOutputDevice(enum OutputDevice outputD
       string = @"d";
       break;
     }
-    case OutputDeviceAudioZone2: {
+    case OutputDeviceAudioZoneHeadphones: {
       string = @"e";
       break;
     }
@@ -136,11 +136,11 @@ static inline NSString *stringForOutputDevice(enum OutputDevice outputDevice) {
       break;
     }
     case OutputDeviceAudioZone1: {
-      string = @"Main Audio Zone";
+      string = @"Main Audio";
       break;
     }
-    case OutputDeviceAudioZone2: {
-      string = @"Audio Zone 2";
+    case OutputDeviceAudioZoneHeadphones: {
+      string = @"Headphones";
       break;
     }
     case OutputDeviceAudioZone3: {

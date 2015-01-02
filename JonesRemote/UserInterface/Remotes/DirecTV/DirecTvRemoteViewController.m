@@ -72,7 +72,7 @@ static CGFloat padding = 10.0;
     // FF, Rewind, Play, etc
     CGFloat btnWidth = 170.f;
     CGFloat playBtnHeight = 130.f;
-    CGFloat btnHeight = (self.view.bounds.size.height - playBtnHeight - (padding * 8.f)) / 7.f;
+    CGFloat btnHeight = (self.view.bounds.size.height - playBtnHeight - (padding * 6.f)) / 5.f;
     CGFloat xCoord = self.view.bounds.size.width - padding - btnWidth;
     CGFloat yCoord = 0.f;
 
@@ -81,41 +81,32 @@ static CGFloat padding = 10.0;
     [self.view addSubview:fastForward];
     yCoord += fastForward.bounds.size.height + padding;
 
+    RemoteButton *forwardThirty = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"+30 Seconds"];
+    [forwardThirty addTarget:self action:@selector(doForwardThirty) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:forwardThirty];
+    yCoord += forwardThirty.bounds.size.height + padding;
+
+    RemoteButton *play = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, playBtnHeight) title:@"Play / Pause"];
+    [play addTarget:self action:@selector(doPlay) forControlEvents:UIControlEventTouchUpInside];
+    play.backgroundColor = [UIColor paperColorGreen400];
+    [self.view addSubview:play];
+    yCoord += play.bounds.size.height + padding;
+
+    RemoteButton *backSix = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"-6 Seconds"];
+    [backSix addTarget:self action:@selector(doBackSix) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backSix];
+    yCoord += backSix.bounds.size.height + padding;
+
     RemoteButton *rewind = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Rewind"];
     [rewind addTarget:self action:@selector(doRewind) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:rewind];
     yCoord += rewind.bounds.size.height + padding;
 
-    RemoteButton *backThirty = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Back 30 Sec."];
-    [backThirty addTarget:self action:@selector(doBackThirty) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:backThirty];
-    yCoord += backThirty.bounds.size.height + padding;
-
-    RemoteButton *forwardThirty = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Forward 30 Sec."];
-    [forwardThirty addTarget:self action:@selector(doForwardThirty) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:forwardThirty];
-    yCoord += forwardThirty.bounds.size.height + padding;
-
-    RemoteButton *play = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, playBtnHeight) title:@"Play"];
-    [play addTarget:self action:@selector(doPlay) forControlEvents:UIControlEventTouchUpInside];
-    play.backgroundColor = [UIColor paperColorAmber100];
-    [self.view addSubview:play];
-    yCoord += play.bounds.size.height + padding;
-
     RemoteButton *record = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Record"];
     [record addTarget:self action:@selector(doRecord) forControlEvents:UIControlEventTouchUpInside];
-    record.backgroundColor = [UIColor paperColorRed50];
+    record.backgroundColor = [UIColor paperColorRed400];
     [self.view addSubview:record];
     yCoord += record.bounds.size.height + padding;
-
-    RemoteButton *stop = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Stop"];
-    [stop addTarget:self action:@selector(doStop) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:stop];
-    yCoord += stop.bounds.size.height + padding;
-
-    RemoteButton *live = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Live"];
-    [live addTarget:self action:@selector(doLive) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:live];
 
     // Direction Pad
     btnWidth = 300.f;
@@ -127,13 +118,13 @@ static CGFloat padding = 10.0;
 
     RemoteButton *guide = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Guide"];
     [guide addTarget:self action:@selector(doGuide) forControlEvents:UIControlEventTouchUpInside];
-    guide.backgroundColor = [UIColor paperColorLightBlue50];
+    guide.backgroundColor = [UIColor paperColorLightBlue300];
     [self.view addSubview:guide];
     yCoord += guide.bounds.size.height + padding;
 
     RemoteButton *recordings = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Recordings"];
     [recordings addTarget:self action:@selector(doRecordings) forControlEvents:UIControlEventTouchUpInside];
-    recordings.backgroundColor = [UIColor paperColorLightGreen50];
+    recordings.backgroundColor = [UIColor paperColorAmber300];
     [self.view addSubview:recordings];
     yCoord += recordings.bounds.size.height + padding;
 
@@ -148,7 +139,7 @@ static CGFloat padding = 10.0;
 
     RemoteButton *select = [RemoteButton buttonWithFrame:CGRectMake(xCoord + padding + (vertBtnWidth * .75f), yCoord, vertBtnWidth * 1.5f, vertBtnHeight) title:@"Select"];
     [select addTarget:self action:@selector(doSelect) forControlEvents:UIControlEventTouchUpInside];
-    select.backgroundColor = [UIColor paperColorAmber100];
+    select.backgroundColor = [UIColor paperColorGreen400];
     [self.view addSubview:select];
 
     RemoteButton *right = [RemoteButton buttonWithFrame:CGRectMake(xCoord + (2 * padding) + (vertBtnWidth * 2.25f), yCoord, vertBtnWidth * 0.75f, vertBtnHeight) title:@"Right"];
@@ -161,7 +152,23 @@ static CGFloat padding = 10.0;
     [self.view addSubview:down];
     yCoord += down.bounds.size.height + padding;
 
-    RemoteButton *exit = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Exit"];
+    CGFloat halfWidth = (btnWidth - padding) / 2.f ;
+
+    RemoteButton *pageUp = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, halfWidth, btnHeight) title:@"Page +"];
+    [pageUp addTarget:self action:@selector(doPageUp) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pageUp];
+
+    RemoteButton *pageDown = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Page -"];
+    [pageDown addTarget:self action:@selector(doPageDown) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pageDown];
+
+    yCoord += down.bounds.size.height + padding;
+
+    RemoteButton *info = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, halfWidth, btnHeight) title:@"Info"];
+    [info addTarget:self action:@selector(doInfo) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:info];
+
+    RemoteButton *exit = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Exit"];
     [exit addTarget:self action:@selector(doExit) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:exit];
 
@@ -178,8 +185,11 @@ static CGFloat padding = 10.0;
     yCoord = 0.f;
 
     for (int i = 1; i < 11; ++i) {
-        if (i == 4 || i == 7 || i == 10) {
+        if (i == 4 || i == 7) {
             xCoord = 0;
+            yCoord += numberSize;
+        } else if (i == 10) {
+            xCoord = numberSize;
             yCoord += numberSize;
         } else if (i > 1) {
             xCoord += numberSize;
@@ -191,23 +201,22 @@ static CGFloat padding = 10.0;
         [numberPanel addSubview:numberBtn];
     }
 
-    RemoteButton *menuBtn = [RemoteButton buttonWithFrame:CGRectMake(numberSize, yCoord, numberSize, numberSize) title:@"Menu"];
-    menuBtn.isRaised = false;
-    [menuBtn addTarget:self action:@selector(doMenu) forControlEvents:UIControlEventTouchUpInside];
-    [numberPanel addSubview:menuBtn];
+    RemoteButton *lastBtn = [RemoteButton buttonWithFrame:CGRectMake(0, yCoord, numberSize, numberSize) title:@"Last"];
+    lastBtn.isRaised = false;
+    [lastBtn addTarget:self action:@selector(doLast) forControlEvents:UIControlEventTouchUpInside];
+    [numberPanel addSubview:lastBtn];
 
-    RemoteButton *infoBtn = [RemoteButton buttonWithFrame:CGRectMake(numberSize * 2, yCoord, numberSize, numberSize) title:@"Info"];
-    infoBtn.isRaised = false;
-    [infoBtn addTarget:self action:@selector(doInfo) forControlEvents:UIControlEventTouchUpInside];
-    [numberPanel addSubview:infoBtn];
+    RemoteButton *enterBtn = [RemoteButton buttonWithFrame:CGRectMake(numberSize * 2, yCoord, numberSize, numberSize) title:@"Enter"];
+    enterBtn.isRaised = false;
+    [enterBtn addTarget:self action:@selector(doEnter) forControlEvents:UIControlEventTouchUpInside];
+    [numberPanel addSubview:enterBtn];
 
     // Extras Table
     _extras = @[
         @(IRCommandPlusChannel),
         @(IRCommandMinusChannel),
-        @(IRCommandEnter),
-        @(IRCommandDash),
         @(IRCommandRedDot),
+        @(IRCommandDash),
     ];
 
     yCoord = numberPanel.bounds.size.height + (padding);
@@ -328,8 +337,8 @@ static CGFloat padding = 10.0;
     [[CommandCenter singleton] sendIRCommand:IRCommandRecordedShows toIRDevice:_device];
 }
 
-- (void)doBackThirty {
-    [[CommandCenter singleton] sendIRCommand:IRCommandBackThirtySec toIRDevice:_device];
+- (void)doBackSix {
+    [[CommandCenter singleton] sendIRCommand:IRCommandBackSixSec toIRDevice:_device];
 }
 
 - (void)doForwardThirty {
@@ -356,12 +365,24 @@ static CGFloat padding = 10.0;
     [[CommandCenter singleton] sendIRCommand:IRCommandDown toIRDevice:_device];
 }
 
-- (void)doMenu {
-    [[CommandCenter singleton] sendIRCommand:IRCommandMenu toIRDevice:_device];
+- (void)doPageUp {
+    [[CommandCenter singleton] sendIRCommand:IRCommandPlusChannel toIRDevice:_device];
+}
+
+- (void)doPageDown {
+    [[CommandCenter singleton] sendIRCommand:IRCommandMinusChannel toIRDevice:_device];
 }
 
 - (void)doInfo {
     [[CommandCenter singleton] sendIRCommand:IRCommandInfo toIRDevice:_device];
+}
+
+- (void)doLast {
+    [[CommandCenter singleton] sendIRCommand:IRCommandLast toIRDevice:_device];
+}
+
+- (void)doEnter {
+    [[CommandCenter singleton] sendIRCommand:IRCommandEnter toIRDevice:_device];
 }
 
 - (void)doExit {

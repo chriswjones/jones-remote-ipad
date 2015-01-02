@@ -41,7 +41,7 @@ static CGFloat padding = 10.0;
 
     RemoteButton *play = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, playBtnHeight) title:@"Play"];
     [play addTarget:self action:@selector(doPlay) forControlEvents:UIControlEventTouchUpInside];
-    play.backgroundColor = [UIColor paperColorAmber100];
+    play.backgroundColor = [UIColor paperColorGreen400];
     [self.view addSubview:play];
     yCoord += play.bounds.size.height + padding;
 
@@ -74,6 +74,7 @@ static CGFloat padding = 10.0;
 
     RemoteButton *diskMenu = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Disk Menu"];
     [diskMenu addTarget:self action:@selector(doDiskMenu) forControlEvents:UIControlEventTouchUpInside];
+    diskMenu.backgroundColor = [UIColor paperColorLightBlue300];
     [self.view addSubview:diskMenu];
     yCoord += diskMenu.bounds.size.height + padding;
 
@@ -93,7 +94,7 @@ static CGFloat padding = 10.0;
 
     RemoteButton *enter = [RemoteButton buttonWithFrame:CGRectMake(xCoord + padding + (vertBtnWidth * .75f), yCoord, vertBtnWidth * 1.5f, vertBtnHeight) title:@"Enter"];
     [enter addTarget:self action:@selector(doEnter) forControlEvents:UIControlEventTouchUpInside];
-    enter.backgroundColor = [UIColor paperColorAmber100];
+    enter.backgroundColor = [UIColor paperColorGreen400];
     [self.view addSubview:enter];
 
     RemoteButton *right = [RemoteButton buttonWithFrame:CGRectMake(xCoord + (2 * padding) + (vertBtnWidth * 2.25f), yCoord, vertBtnWidth * 0.75f, vertBtnHeight) title:@"Right"];
@@ -123,8 +124,11 @@ static CGFloat padding = 10.0;
     yCoord = 0.f;
 
     for (int i = 1; i < 11; ++i) {
-        if (i == 4 || i == 7 || i == 10) {
+        if (i == 4 || i == 7) {
             xCoord = 0;
+            yCoord += numberSize;
+        } else if (i == 10) {
+            xCoord = numberSize;
             yCoord += numberSize;
         } else if (i > 1) {
             xCoord += numberSize;
@@ -136,7 +140,7 @@ static CGFloat padding = 10.0;
         [numberPanel addSubview:numberBtn];
     }
 
-    RemoteButton *titleBtn = [RemoteButton buttonWithFrame:CGRectMake(numberSize, yCoord, numberSize, numberSize) title:@"Title"];
+    RemoteButton *titleBtn = [RemoteButton buttonWithFrame:CGRectMake(0, yCoord, numberSize, numberSize) title:@"Title"];
     titleBtn.isRaised = false;
     [titleBtn addTarget:self action:@selector(doTitle) forControlEvents:UIControlEventTouchUpInside];
     [numberPanel addSubview:titleBtn];

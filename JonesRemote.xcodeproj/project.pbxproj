@@ -77,7 +77,7 @@
 		5A4169DA4B5A31005EBD192C /* RemotePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemotePanel.m; sourceTree = "<group>"; };
 		5A416A456FFFA370F1C97528 /* ShellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellViewController.h; sourceTree = "<group>"; };
 		5A416A62F7344C101BC6E6D2 /* RemotePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemotePanel.h; sourceTree = "<group>"; };
-		5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JonesRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A416A6C86D8E4E5DBC773C5 /* Jones Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jones Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A416A76FE3F0FD4860DFCCF /* BluRayRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluRayRemoteViewController.h; sourceTree = "<group>"; };
 		5A416A84196A12CDB487ABE9 /* MatrixEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixEnum.h; sourceTree = "<group>"; };
 		5A416AC32360087937E12417 /* CommandCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandCenter.m; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		5A4164155D7C24056909E736 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */,
+				5A416A6C86D8E4E5DBC773C5 /* Jones Remote.app */,
 				5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */,
 			);
 			name = Products;
@@ -361,7 +361,7 @@
 			);
 			name = "Jones Remote";
 			productName = JonesRemote;
-			productReference = 5A416A6C86D8E4E5DBC773C5 /* JonesRemote.app */;
+			productReference = 5A416A6C86D8E4E5DBC773C5 /* Jones Remote.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5A416B68211D43360E760625 /* JonesRemoteTests */ = {

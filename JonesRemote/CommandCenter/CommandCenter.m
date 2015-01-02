@@ -8,6 +8,7 @@
 #import "DirecTvDvr.h"
 #import "MatrixEnum.h"
 #import "IREnum.h"
+#import "DirecTvBox.h"
 
 #define MATRIX_SOCKET_IP @"192.168.0.201"
 #define MATRIX_SOCKET_PORT 4999
@@ -199,8 +200,10 @@ SINGLETON(CommandCenter)
             class = [TimeWarnerDVR class];
             break;
         case IRDeviceDirecTvDvr:
-        case IRDeviceDirecTvBox:
             class = [DirecTvDvr class];
+            break;
+        case IRDeviceDirecTvBox:
+            class = [DirecTvBox class];
             break;
         case IRDeviceLeftTv:
         case IRDeviceCenterTv:

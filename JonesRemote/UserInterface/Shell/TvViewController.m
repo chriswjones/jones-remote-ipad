@@ -98,10 +98,6 @@ static CGFloat padding = 10.0;
         [self bindInput:InputDeviceMac];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceWii) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceWii];
-    }]];
-
     [alert addAction:[UIAlertAction actionWithTitle:@"TV Off" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         [self bindInput:InputDeviceNone];
     }]];

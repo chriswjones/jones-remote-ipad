@@ -2,7 +2,7 @@ NS_ENUM(int, IRCommand) {
     IRCommandNoCommand,
     IRCommand0, IRCommand1, IRCommand2, IRCommand3, IRCommand4, IRCommand5, IRCommand6, IRCommand7, IRCommand8, IRCommand9,
     IRCommandRewind, IRCommandFastForward, IRCommandPlay, IRCommandPause, IRCommandStop, IRCommandRecord, IRCommandLive, IRCommandSkipForward, IRCommandSkipBack,
-    IRCommandGuide, IRCommandRecordedShows, IRCommandPageUp, IRCommandPageDown, IRCommandUp, IRCommandDown, IRCommandLeft, IRCommandRight, IRCommandSelect, IRCommandExit, IRCommandStar, IRCommandPound, IRCommandD, IRCommandFAV, IRCommandLast, IRCommandHelp, IRCommandSports, IRCommandCircleArrow,
+    IRCommandGuide, IRCommandRecordedShows, IRCommandPageUp, IRCommandPageDown, IRCommandUp, IRCommandDown, IRCommandLeft, IRCommandRight, IRCommandSelect, IRCommandExit, IRCommandStar, IRCommandPound, IRCommandD, IRCommandFAV, IRCommandLast, IRCommandHelp, IRCommandSports,
     IRCommandA, IRCommandB, IRCommandC, IRCommandInfo, IRCommandOnDemand, IRCommandSettings,
     IRCommandPowerOn, IRCommandPowerOff, IRCommandPowerOnOff, IRCommandVolUp, IRCommandVolDown, IRCommandMute,
     IRCommandPlusDay, IRCommandMinusDay, IRCommandPlusChannel, IRCommandMinusChannel,
@@ -10,7 +10,9 @@ NS_ENUM(int, IRCommand) {
     IRCommandMuteOn, IRCommandMuteOff,
     IRCommandMenu,
     IRCommandZoom, IRCommandMarker, IRCommandSearch, IRCommandHome, IRCommandDiskMenu, IRCommandTitle, IRCommandOpenClose, IRCommandEnter, IRCommandClear, IRCommandRepeat, IRCommandRed, IRCommandGreen, IRCommandYellow, IRCommandBlue,
-    IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackThirtySec, IRCommandForwardThirtySec, IRCommandDash, IRCommandRedDot
+    IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackSixSec, IRCommandBackFifteenSec, IRCommandForwardThirtySec, IRCommandDash, IRCommandRedDot,
+    IRCommandBassPlus, IRCommandBassMinus, IRCommandTreblePlus, IRCommandTrebleMinus,
+    IRCommandSurroundModeAuto, IRCommandSurroundModeDolby, IRCommandSurroundModeDTS, IRCommandSurroundModePureDirect, IRCommandSurroundModeMultiChannel, IRCommandSurroundModeStereo, IRCommandSurroundModeVirtual, IRCommandSurroundModeCircle
 };
 
 static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
@@ -137,8 +139,6 @@ static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
             return @"Help";
         case IRCommandSports:
             return @"Sports";
-        case IRCommandCircleArrow:
-            return @"Circle Arrow";
         case IRCommandHome:
             return @"Home";
         case IRCommandDiskMenu:
@@ -165,12 +165,12 @@ static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
             return @"Night Mode";
         case IRCommandPreviousChannel:
             return @"Previous Channe;";
-        case IRCommandBackThirtySec:
-            return @"Back Thirty Sec.";
+        case IRCommandBackSixSec:
+            return @"Back Six Sec.";
         case IRCommandForwardThirtySec:
             return @"Forward 30 sec.";
         case IRCommandDash:
-            return @"Dash (-)";
+            return @"Guide/Playlist Options";
         case IRCommandRedDot:
             return @"Red Dot";
         default:

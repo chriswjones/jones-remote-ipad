@@ -12,15 +12,18 @@
 #import "FooterViewController.h"
 #import "MatrixEnum.h"
 #import "CommandCenter.h"
-#import "IREnum.h"
 
-static CGFloat zoneBtnWidth = 200.0;
-static CGFloat inputBtnWidth = 170.0;
-static CGFloat iconBtnWidth = 120.0;
+static CGFloat zoneBtnWidth = 160.0;
+static CGFloat inputBtnWidth = 150.0;
+static CGFloat surroundModeBtnWidth = 150.0;
+static CGFloat eqBtnWidth = 100.0;
+static CGFloat iconBtnWidth = 100.0;
 
 @implementation FooterViewController {
     BFPaperButton *_zone;
     BFPaperButton *_input;
+    BFPaperButton *_surroundMode;
+    BFPaperButton *_eq;
     BFPaperButton *_volumeDown;
     BFPaperButton *_volumeUp;
     BFPaperButton *_mute;
@@ -47,14 +50,29 @@ static CGFloat iconBtnWidth = 120.0;
     [_zone addTarget:self action:@selector(doZone:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_zone];
 
-
     _input = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
     _input.backgroundColor = _defaultItemColor;
     _input.cornerRadius = 0.0;
     _input.tapCircleDiameter = bfPaperButton_tapCircleDiameterSmall;
-    [_input setTitle:@"Change Input" forState:UIControlStateNormal];
+    [_input setTitle:@"Audio Input" forState:UIControlStateNormal];
     [_input addTarget:self action:@selector(doInput:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_input];
+
+    _surroundMode = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
+    _surroundMode.backgroundColor = _defaultItemColor;
+    _surroundMode.cornerRadius = 0.0;
+    _surroundMode.tapCircleDiameter = bfPaperButton_tapCircleDiameterSmall;
+    [_surroundMode setTitle:@"Surround Mode" forState:UIControlStateNormal];
+    [_surroundMode addTarget:self action:@selector(doSurroundMode:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_surroundMode];
+
+    _eq = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
+    _eq.backgroundColor = _defaultItemColor;
+    _eq.cornerRadius = 0.0;
+    _eq.tapCircleDiameter = bfPaperButton_tapCircleDiameterSmall;
+    [_eq setTitle:@"EQ" forState:UIControlStateNormal];
+    [_eq addTarget:self action:@selector(doEq:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_eq];
 
     _volumeDown = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
     _volumeDown.backgroundColor = _defaultItemColor;
@@ -71,14 +89,6 @@ static CGFloat iconBtnWidth = 120.0;
     [_volumeUp setTitle:@"Vol +" forState:UIControlStateNormal];
     [_volumeUp addTarget:self action:@selector(doVolUp) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_volumeUp];
-
-//    _unMute = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
-//    _unMute.backgroundColor = _defaultItemColor;
-//    _unMute.cornerRadius = 0.0;
-//    _unMute.tapCircleDiameter = bfPaperButton_tapCircleDiameterSmall / 2;
-//    [_unMute setTitle:@"Un-Mute" forState:UIControlStateNormal];
-//    [_unMute addTarget:self action:@selector(doUnMute) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:_unMute];
 
     _mute = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0) raised:NO];
     _mute.backgroundColor = _defaultItemColor;
@@ -99,13 +109,15 @@ static CGFloat iconBtnWidth = 120.0;
     _zone.frame = CGRectMake(xPosition, 0, zoneBtnWidth, btnHeight);
     xPosition += zoneBtnWidth;
     _input.frame = CGRectMake(xPosition, 0, inputBtnWidth, btnHeight);
+    xPosition += zoneBtnWidth;
+    _surroundMode.frame = CGRectMake(xPosition, 0, surroundModeBtnWidth, btnHeight);
+    xPosition += zoneBtnWidth;
+    _eq.frame = CGRectMake(xPosition, 0, eqBtnWidth, btnHeight);
 
     // Right aligned
     xPosition = self.view.bounds.size.width;
     _mute.frame = CGRectMake(xPosition - iconBtnWidth, 0, iconBtnWidth, btnHeight);
     xPosition -= iconBtnWidth;
-//    _unMute.frame = CGRectMake(xPosition - iconBtnWidth, 0, iconBtnWidth, btnHeight);
-//    xPosition -= iconBtnWidth;
     _volumeUp.frame = CGRectMake(xPosition - iconBtnWidth, 0, iconBtnWidth, btnHeight);
     xPosition -= iconBtnWidth;
     _volumeDown.frame = CGRectMake(xPosition - iconBtnWidth, 0, iconBtnWidth, btnHeight);
@@ -132,12 +144,8 @@ static CGFloat iconBtnWidth = 120.0;
         [self bindZone:OutputDeviceAudioZone1];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForOutputDevice(OutputDeviceAudioZone2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindZone:OutputDeviceAudioZone2];
-    }]];
-
-    [alert addAction:[UIAlertAction actionWithTitle:stringForOutputDevice(OutputDeviceAudioZone3) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindZone:OutputDeviceAudioZone3];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForOutputDevice(OutputDeviceAudioZoneHeadphones) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindZone:OutputDeviceAudioZoneHeadphones];
     }]];
 
     [self presentViewController:alert animated:YES completion:nil];
@@ -173,8 +181,74 @@ static CGFloat iconBtnWidth = 120.0;
         [self bindInput:InputDeviceMac];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceWii) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceWii];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)doSurroundMode:(UIButton *)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert setModalPresentationStyle:UIModalPresentationPopover];
+    [alert popoverPresentationController].sourceView = sender;
+    [alert popoverPresentationController].sourceRect = sender.bounds;
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Auto" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeAuto toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Dolby" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"DTS" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDTS toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Pure Direct" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModePureDirect toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Multi Channel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeMultiChannel toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Stereo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeStereo toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Virtual" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeVirtual toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Circle" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeCircle toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)doEq:(UIButton *)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert setModalPresentationStyle:UIModalPresentationPopover];
+    [alert popoverPresentationController].sourceView = sender;
+    [alert popoverPresentationController].sourceRect = sender.bounds;
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Bass +" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandBassPlus toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Bass -" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandBassMinus toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Treble +" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandTreblePlus toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Treble -" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandTrebleMinus toIRDevice:IRDeviceMarantz];
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"Night Mode" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandNightMode toIRDevice:IRDeviceMarantz];
     }]];
 
     [self presentViewController:alert animated:YES completion:nil];

@@ -5,6 +5,10 @@
 
 + (NSString *)stringForIRCommand:(enum IRCommand)command {
     switch (command) {
+        case IRCommandPowerOn:
+            return @"38000,1,1,228,45,46,46,23,22,23,46,23,46,46,22,46,46,23,46,23,46,23,760";
+        case IRCommandPowerOff:
+            return @"38000,1,1,228,45,46,45,23,23,23,45,23,45,46,23,46,45,23,45,23,45,23,760";
         case IRCommandGuide:
             return @"38000,1,1,228,45,46,45,23,23,46,23,46,45,46,23,23,45,23,45,23,23,23,760";
         case IRCommandExit:
@@ -41,7 +45,7 @@
             return @"38000,1,1,228,46,46,45,23,22,23,22,23,22,46,45,46,23,46,23,46,45,23,760";
         case IRCommandPreviousChannel:
             return @"38000,1,1,228,45,46,46,23,22,23,22,23,22,46,46,46,46,46,46,23,22,23,760";
-        case IRCommandBackThirtySec:
+        case IRCommandBackSixSec:
             return @"38000,1,1,228,46,46,45,23,22,23,22,46,45,23,46,46,23,23,46,23,22,23,760";
         case IRCommandForwardThirtySec:
             return @"38000,1,1,228,46,46,45,23,22,23,22,46,45,23,46,46,45,23,46,23,46,23,760";
