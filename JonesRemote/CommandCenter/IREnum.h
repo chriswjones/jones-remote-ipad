@@ -10,7 +10,7 @@ NS_ENUM(int, IRCommand) {
     IRCommandMuteOn, IRCommandMuteOff,
     IRCommandMenu,
     IRCommandZoom, IRCommandMarker, IRCommandSearch, IRCommandHome, IRCommandDiskMenu, IRCommandTitle, IRCommandOpenClose, IRCommandEnter, IRCommandClear, IRCommandRepeat, IRCommandRed, IRCommandGreen, IRCommandYellow, IRCommandBlue,
-    IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackSixSec, IRCommandBackFifteenSec, IRCommandForwardThirtySec, IRCommandDash, IRCommandRedDot,
+    IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackSixSec, IRCommandBackFifteenSec, IRCommandForwardThirtySec, IRCommandGuidePlaylistOptions, IRCommandRedDot,
     IRCommandBassPlus, IRCommandBassMinus, IRCommandTreblePlus, IRCommandTrebleMinus,
     IRCommandSurroundModeAuto, IRCommandSurroundModeDolby, IRCommandSurroundModeDTS, IRCommandSurroundModePureDirect, IRCommandSurroundModeMultiChannel, IRCommandSurroundModeStereo, IRCommandSurroundModeVirtual, IRCommandSurroundModeCircle
 };
@@ -169,7 +169,7 @@ static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
             return @"Back Six Sec.";
         case IRCommandForwardThirtySec:
             return @"Forward 30 sec.";
-        case IRCommandDash:
+        case IRCommandGuidePlaylistOptions:
             return @"Guide/Playlist Options";
         case IRCommandRedDot:
             return @"Red Dot";

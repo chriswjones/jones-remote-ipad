@@ -152,7 +152,7 @@ static CGFloat padding = 10.0;
     [self.view addSubview:down];
     yCoord += down.bounds.size.height + padding;
 
-    CGFloat halfWidth = (btnWidth - padding) / 2.f ;
+    CGFloat halfWidth = (btnWidth - padding) / 2.f;
 
     RemoteButton *pageUp = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, halfWidth, btnHeight) title:@"Page +"];
     [pageUp addTarget:self action:@selector(doPageUp) forControlEvents:UIControlEventTouchUpInside];
@@ -168,7 +168,12 @@ static CGFloat padding = 10.0;
     [info addTarget:self action:@selector(doInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:info];
 
-    RemoteButton *exit = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Exit"];
+    RemoteButton *menu = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Menu"];
+    [menu addTarget:self action:@selector(doMenu) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:menu];
+    yCoord += menu.bounds.size.height + padding;
+
+    RemoteButton *exit = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, btnWidth, btnHeight) title:@"Exit"];
     [exit addTarget:self action:@selector(doExit) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:exit];
 
@@ -216,7 +221,7 @@ static CGFloat padding = 10.0;
         @(IRCommandPlusChannel),
         @(IRCommandMinusChannel),
         @(IRCommandRedDot),
-        @(IRCommandDash),
+        @(IRCommandGuidePlaylistOptions),
     ];
 
     yCoord = numberPanel.bounds.size.height + (padding);
@@ -387,6 +392,10 @@ static CGFloat padding = 10.0;
 
 - (void)doExit {
     [[CommandCenter singleton] sendIRCommand:IRCommandExit toIRDevice:_device];
+}
+
+- (void)doMenu {
+    [[CommandCenter singleton] sendIRCommand:IRCommandMenu toIRDevice:_device];
 }
 
 - (void)doNumber:(RemoteButton *)sender {
