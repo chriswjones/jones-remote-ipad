@@ -299,7 +299,7 @@ static CGFloat settingsBtnWidth = 150.0;
         [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
         [defaults setObject:@(InputDeviceTimeWarnerBox) forKey:stringForOutputDevice(OutputDeviceRightTv)];
         [defaults synchronize];
-    }else {
+            }else {
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
@@ -325,13 +325,23 @@ static CGFloat settingsBtnWidth = 150.0;
     [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceMarantz];
 
     // this will set the remote, input (and audio) and power the TV On
+    if (_sportsBar) {
+        [[CommandCenter singleton] setMatrixInput:InputDeviceTimeWarnerDvr1 toOutput:OutputDeviceCenterTv];
+                [[CommandCenter singleton] setMatrixInput:InputDeviceTimeWarnerDvr2 toOutput:OutputDeviceLeftTv];
+                [[CommandCenter singleton] setMatrixInput:InputDeviceTimeWarnerBox toOutput:OutputDeviceRightTv];
+        
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceCenterTv];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceLeftTv];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceRightTv];
+    }
+    
     [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv action:YES];
 
     // Default Surround Sound mode
     [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
 
     // hide HUD 12 seconds later
-    [NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:NO];
 }
 
 - (void)finishPowerMusicOn {
