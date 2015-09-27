@@ -4,6 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IREnum.h"
 
 @interface TimeWarnerRemoteViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

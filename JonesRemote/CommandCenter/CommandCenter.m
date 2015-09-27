@@ -5,10 +5,6 @@
 #import "PanasonicPlasmaTV.h"
 #import "BluRay.h"
 #import "Marantz.h"
-#import "DirecTvDvr.h"
-#import "MatrixEnum.h"
-#import "IREnum.h"
-#import "DirecTvBox.h"
 
 #define MATRIX_SOCKET_IP @"192.168.0.201"
 #define MATRIX_SOCKET_PORT 4999
@@ -35,6 +31,7 @@
     GCDAsyncSocket *_ir1Socket;
     GCDAsyncSocket *_ir2Socket;
     dispatch_queue_t _commandQueue;
+    NSTimer *_emptyTimer;
 }
 
 SINGLETON(CommandCenter)
@@ -63,20 +60,37 @@ SINGLETON(CommandCenter)
 
 - (void)connectSockets {
     if (![_matrixSocket isConnected]) {
+        NSLog(@"Matrix socket is disconnected, attempting to connect!");
         [_matrixSocket connectToHost:MATRIX_SOCKET_IP onPort:MATRIX_SOCKET_PORT withTimeout:CONNECT_SOCKET_TIMEOUT error:nil];
     }
 
     if (![_receiverSocket isConnected]) {
+        NSLog(@"Receiver socket is disconnected, attempting to connect!");
         [_receiverSocket connectToHost:RECEIVER_SOCKET_IP onPort:RECEIVER_SOCKET_PORT error:nil];
     }
 
     if (![_ir1Socket isConnected]) {
+        NSLog(@"IR1 socket is disconnected, attempting to connect!");
         [_ir1Socket connectToHost:IR1_SOCKET_IP onPort:IR1_SOCKET_PORT error:nil];
     }
 
     if (![_ir2Socket isConnected]) {
+        NSLog(@"IR2 socket is disconnected, attempting to connect!");
         [_ir2Socket connectToHost:IR2_SOCKET_IP onPort:IR2_SOCKET_PORT error:nil];
     }
+
+    if (_emptyTimer) {
+        [_emptyTimer invalidate];
+        _emptyTimer = nil;
+    }
+    _emptyTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(sendEmpty) userInfo:nil repeats:NO];
+}
+
+- (void)sendEmpty {
+    // send an empty to command to each of the IR hubs (choosing one device from each)
+    NSLog(@"sending empty!");
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr1];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceBluRay];
 }
 
 - (void)disconnectSockets {
@@ -180,10 +194,10 @@ SINGLETON(CommandCenter)
 }
 
 - (void)processIrCommand:(enum IRCommand)irCommand irDevice:(enum IRDevice)irDevice {
-    NSString *locationString = [CommandCenter locationStringForIRDevice:irDevice];
+    NSString * locationString = [CommandCenter locationStringForIRDevice:irDevice];
     Class <IRHardware> hardwareClass = [CommandCenter hardwareClassForIRDevice:irDevice];
-    NSString *commandString = [hardwareClass stringForIRCommand:irCommand];
-    NSString *finalString = [NSString stringWithFormat:@"sendir,%@,999,%@\r", locationString, commandString];
+    NSString * commandString = [hardwareClass stringForIRCommand:irCommand];
+    NSString * finalString = [NSString stringWithFormat:@"sendir,%@,999,%@\r", locationString, commandString];
 
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"Final IR String:%@", finalString);
@@ -196,14 +210,14 @@ SINGLETON(CommandCenter)
 + (Class <IRHardware>)hardwareClassForIRDevice:(enum IRDevice)irDevice {
     Class <IRHardware> class = nil;
     switch (irDevice) {
-        case IRDeviceTimeWarnerDvr:
+        case IRDeviceTimeWarnerDvr1:
             class = [TimeWarnerDVR class];
             break;
-        case IRDeviceDirecTvDvr:
-            class = [DirecTvDvr class];
+        case IRDeviceTimeWarnerDvr2:
+            class = [TimeWarnerDVR class];
             break;
-        case IRDeviceDirecTvBox:
-            class = [DirecTvBox class];
+        case IRDeviceTimeWarnerBox:
+            class = [TimeWarnerDVR class];
             break;
         case IRDeviceLeftTv:
         case IRDeviceCenterTv:
@@ -226,11 +240,11 @@ SINGLETON(CommandCenter)
 
 + (NSString *)locationStringForIRDevice:(enum IRDevice)irDevice {
     switch (irDevice) {
-        case IRDeviceDirecTvDvr:
-            return @"4:2";
-        case IRDeviceTimeWarnerDvr:
+        case IRDeviceTimeWarnerDvr1:
             return @"4:1";
-        case IRDeviceDirecTvBox:
+        case IRDeviceTimeWarnerDvr2:
+            return @"4:2";
+        case IRDeviceTimeWarnerBox:
             return @"4:3";
         case IRDeviceLeftTv:
             return @"5:1";
@@ -253,9 +267,9 @@ SINGLETON(CommandCenter)
         case IRDeviceLeftTv:
         case IRDeviceRightTv:
         case IRDeviceCenterTv:
-        case IRDeviceTimeWarnerDvr:
-        case IRDeviceDirecTvDvr:
-        case IRDeviceDirecTvBox:
+        case IRDeviceTimeWarnerDvr1:
+        case IRDeviceTimeWarnerDvr2:
+        case IRDeviceTimeWarnerBox:
             return _ir1Socket;
         case IRDeviceBluRay:
         case IRDeviceMarantz:

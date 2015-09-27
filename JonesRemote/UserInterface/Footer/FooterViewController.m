@@ -157,16 +157,16 @@ static CGFloat iconBtnWidth = 100.0;
     [alert popoverPresentationController].sourceView = sender;
     [alert popoverPresentationController].sourceRect = sender.bounds;
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerDvr];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerDvr1];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerBox1];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerDvr2];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerBox2];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox];
     }]];
 
     [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceBluRay) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -263,7 +263,7 @@ static CGFloat iconBtnWidth = 100.0;
 }
 
 - (void)doMute {
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommandMute toIRDevice:IRDeviceMarantz];
+    [[CommandCenter singleton] sendIRCommand:IRCommandMute toIRDevice:IRDeviceMarantz];
 }
 
 @end

@@ -74,16 +74,16 @@ static CGFloat padding = 10.0;
     [alert popoverPresentationController].sourceView = sender;
     [alert popoverPresentationController].sourceRect = sender.bounds;
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerDvr];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerDvr1];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerBox1];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerDvr2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerDvr2];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceTimeWarnerBox2];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox];
     }]];
 
     [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceBluRay) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -123,14 +123,22 @@ static CGFloat padding = 10.0;
     }
 
     switch (input) {
-        case InputDeviceTimeWarnerDvr:
-        case InputDeviceTimeWarnerBox1:
-        case InputDeviceTimeWarnerBox2: {
+        case InputDeviceTimeWarnerDvr1:
+        case InputDeviceTimeWarnerDvr2:
+        case InputDeviceTimeWarnerBox: {
             if (!_timeWarner) {
                 _timeWarner = [[TimeWarnerRemoteViewController alloc] init];
                 _timeWarner.view.backgroundColor = _remoteContainer.backgroundColor;
             }
-            [_direcTv bindInput:IRDeviceDirecTvBox];
+        
+            if (input == InputDeviceTimeWarnerDvr1) {
+                [_timeWarner bindInput:IRDeviceTimeWarnerDvr1];
+            }else if (input == InputDeviceTimeWarnerDvr2) {
+                [_timeWarner bindInput:IRDeviceTimeWarnerDvr2];
+            }else {
+                [_timeWarner bindInput:IRDeviceTimeWarnerBox];
+            }            
+
             _curRemoteVc = _timeWarner;
             break;
         }

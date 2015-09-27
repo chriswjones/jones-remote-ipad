@@ -4,6 +4,8 @@
 
 + (NSString *)stringForIRCommand:(enum IRCommand)command {
     switch (command) {
+        case IRCommandEmpty: // actual command taken from DirecTV
+            return @"38000,1,1,228,46,46,45,23,22,23,22,23,22,46,45,46,45,46,45,23,22,23,760";
         case IRCommandPowerOnOff:
             return @"38000,1,1,171,170,21,63,21,21,21,63,21,63,21,21,21,63,21,21,21,21,21,63,21,21,21,63,21,63,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,21,21,21,21,63,21,63,21,63,21,63,21,21,21,21,21,63,21,63,21,760";
         case IRCommandEnter:

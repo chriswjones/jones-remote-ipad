@@ -12,11 +12,14 @@ NS_ENUM(int, IRCommand) {
     IRCommandZoom, IRCommandMarker, IRCommandSearch, IRCommandHome, IRCommandDiskMenu, IRCommandTitle, IRCommandOpenClose, IRCommandEnter, IRCommandClear, IRCommandRepeat, IRCommandRed, IRCommandGreen, IRCommandYellow, IRCommandBlue,
     IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackSixSec, IRCommandBackFifteenSec, IRCommandForwardThirtySec, IRCommandGuidePlaylistOptions, IRCommandRedDot,
     IRCommandBassPlus, IRCommandBassMinus, IRCommandTreblePlus, IRCommandTrebleMinus,
-    IRCommandSurroundModeAuto, IRCommandSurroundModeDolby, IRCommandSurroundModeDTS, IRCommandSurroundModePureDirect, IRCommandSurroundModeMultiChannel, IRCommandSurroundModeStereo, IRCommandSurroundModeVirtual, IRCommandSurroundModeCircle
+    IRCommandSurroundModeAuto, IRCommandSurroundModeDolby, IRCommandSurroundModeDTS, IRCommandSurroundModePureDirect, IRCommandSurroundModeMultiChannel, IRCommandSurroundModeStereo, IRCommandSurroundModeVirtual, IRCommandSurroundModeCircle,
+    IRCommandEmpty
 };
 
 static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
     switch (irCommand) {
+        case IRCommandEmpty:
+            return @"Empty";
         case IRCommandZoom:
             return @"Zoom";
         case IRCommandMarker:
@@ -96,7 +99,7 @@ static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
         case IRCommandPowerOff:
             return @"Power Off";
         case IRCommandPowerOnOff:
-            return @"Power";
+            return @"Toggle Power";
         case IRCommandVolUp:
             return @"Vol +";
         case IRCommandVolDown:
@@ -180,9 +183,9 @@ static inline NSString *stringForIRCommand(enum IRCommand irCommand) {
 }
 
 NS_ENUM(int, IRDevice) {
-    IRDeviceTimeWarnerDvr,
-    IRDeviceDirecTvDvr,
-    IRDeviceDirecTvBox,
+    IRDeviceTimeWarnerDvr1,
+    IRDeviceTimeWarnerDvr2,
+    IRDeviceTimeWarnerBox,
     IRDeviceBluRay,
     IRDeviceMac,
     IRDeviceAppleTv,
@@ -196,12 +199,12 @@ NS_ENUM(int, IRDevice) {
 
 static inline NSString *stringForIRDevice(enum IRDevice irDevice) {
     switch (irDevice) {
-        case IRDeviceTimeWarnerDvr:
-            return @"TW Cable";
-        case IRDeviceDirecTvDvr:
-            return @"DirecTV DVR";
-        case IRDeviceDirecTvBox:
-            return @"DirecTV Box";
+        case IRDeviceTimeWarnerDvr1:
+            return @"DVR #1";
+        case IRDeviceTimeWarnerDvr2:
+            return @"DVR #2";
+        case IRDeviceTimeWarnerBox:
+            return @"Cable Box";
         case IRDeviceBluRay:
             return @"Blu-Ray";
         case IRDeviceMac:

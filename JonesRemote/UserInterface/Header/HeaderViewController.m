@@ -33,64 +33,64 @@ static CGFloat settingsBtnWidth = 150.0;
 
     _sceneData = @[
         [Scene sceneWithName:@"ESPN"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"0301"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0206"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0208"],
         [Scene sceneWithName:@"NFL"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"008"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0069"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0702"],
         [Scene sceneWithName:@"NCAA"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"0375"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0206"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0008"],
         [Scene sceneWithName:@"News 1"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"0046"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0204"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0206"],
         [Scene sceneWithName:@"News 2"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"0050"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0360"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0202"],
         [Scene sceneWithName:@"Business"
-                 leftTvInput:InputDeviceTimeWarnerDvr
-                    leftTvIr:IRDeviceTimeWarnerDvr
+                 leftTvInput:InputDeviceTimeWarnerDvr1
+                    leftTvIr:IRDeviceTimeWarnerDvr1
                leftTvChannel:@"0205"
-               centerTvInput:InputDeviceTimeWarnerBox1
-                  centerTvIr:IRDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerDvr2
+                  centerTvIr:IRDeviceTimeWarnerDvr2
              centerTvChannel:@"0359"
-                rightTvInput:InputDeviceTimeWarnerBox2
-                   rightTvIr:IRDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox
+                   rightTvIr:IRDeviceTimeWarnerBox
               rightTvChannel:@"0353"]
     ];
 
@@ -188,6 +188,9 @@ static CGFloat settingsBtnWidth = 150.0;
 }
 
 - (void)doPower:(UIButton *)sender {
+    // so powering on works after a while
+    [[CommandCenter singleton] connectSockets];
+
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     [alert setModalPresentationStyle:UIModalPresentationPopover];
     [alert popoverPresentationController].sourceView = sender;
@@ -200,9 +203,9 @@ static CGFloat settingsBtnWidth = 150.0;
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
 
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceDirecTvDvr];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceDirecTvBox];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerBox];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
 
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
@@ -244,9 +247,9 @@ static CGFloat settingsBtnWidth = 150.0;
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
 
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceDirecTvDvr];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceDirecTvBox];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerBox];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
 
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
@@ -267,31 +270,32 @@ static CGFloat settingsBtnWidth = 150.0;
 
 - (void)finishPowerOn {
     // set DVR channel to default channel
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceDirecTvDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceDirecTvDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceDirecTvDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceDirecTvDvr];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr2];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceTimeWarnerDvr2];
 
     // Set other boxes to default channels
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceDirecTvBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceDirecTvBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceDirecTvBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceDirecTvBox];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerBox];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceTimeWarnerBox];
 
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
 
     // set center TV to dvr input
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
-    [defaults setObject:@(InputDeviceTimeWarnerBox1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
+    [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
     [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceRightTv)];
     [defaults synchronize];
 
     // Audio On
     [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceMarantz];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
 
     // this will set the remote, input (and audio) and power the TV On
     [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv action:YES];

@@ -8,9 +8,9 @@ NS_ENUM(int, OutputDevice) {
 };
 
 NS_ENUM(int, InputDevice) {
-  InputDeviceTimeWarnerDvr,
-    InputDeviceTimeWarnerBox1,
-    InputDeviceTimeWarnerBox2,
+    InputDeviceTimeWarnerDvr1,
+    InputDeviceTimeWarnerDvr2,
+    InputDeviceTimeWarnerBox,
   InputDeviceBluRay,
   InputDeviceMac,
   InputDeviceAppleTv,
@@ -78,15 +78,15 @@ static inline NSData *matrixCommandDataForOutputDevice(enum OutputDevice outputD
 static inline NSData *matrixCommandDataForInputDevice(enum InputDevice inputDevice) {
   NSString *string = nil;
   switch (inputDevice) {
-    case InputDeviceTimeWarnerDvr: {
+    case InputDeviceTimeWarnerDvr1: {
       string = @"1";
       break;
     }
-    case InputDeviceTimeWarnerBox1: {
+    case InputDeviceTimeWarnerDvr2: {
       string = @"2";
       break;
     }
-    case InputDeviceTimeWarnerBox2: {
+    case InputDeviceTimeWarnerBox: {
       string = @"3";
       break;
     }
@@ -158,16 +158,16 @@ static inline NSString *stringForOutputDevice(enum OutputDevice outputDevice) {
 static inline NSString *stringForInputDevice(enum InputDevice inputDevice) {
   NSString *string = nil;
   switch (inputDevice) {
-    case InputDeviceTimeWarnerDvr: {
-      string = @"TW DVR";
+    case InputDeviceTimeWarnerDvr1: {
+      string = @"DVR #1";
       break;
     }
-    case InputDeviceTimeWarnerBox1: {
-      string = @"DirecTV DVR";
+    case InputDeviceTimeWarnerDvr2: {
+      string = @"DVR #2";
       break;
     }
-    case InputDeviceTimeWarnerBox2: {
-      string = @"DirecTV Box";
+    case InputDeviceTimeWarnerBox: {
+      string = @"Cable Box";
       break;
     }
     case InputDeviceBluRay: {
