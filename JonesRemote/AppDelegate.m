@@ -43,7 +43,7 @@
         [_socketTimer invalidate];
         _socketTimer = nil;
     }
-    _socketTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
+    _socketTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
 }
 
 - (void)connectSockets {

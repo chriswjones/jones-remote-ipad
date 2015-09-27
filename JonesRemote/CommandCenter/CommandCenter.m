@@ -90,7 +90,10 @@ SINGLETON(CommandCenter)
     // send an empty to command to each of the IR hubs (choosing one device from each)
     NSLog(@"sending empty!");
     [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr1];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr2];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerBox];
     [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceBluRay];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceMarantz];
 }
 
 - (void)disconnectSockets {
