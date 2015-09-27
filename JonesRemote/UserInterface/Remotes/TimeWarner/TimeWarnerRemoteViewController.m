@@ -23,7 +23,6 @@ static CGFloat padding = 10.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 0, 1024.0, 528.0);
-    _device = IRDeviceTimeWarnerDvr;
 
     // Favorites
     _favorites = @[
@@ -263,6 +262,10 @@ static CGFloat padding = 10.0;
     _extrasTableView.delegate = self;
     _extrasTableView.dataSource = self;
     [extrasPanel addSubview:_extrasTableView];
+}
+
+- (void)bindInput:(enum IRDevice)irDevice {
+    _device = irDevice;
 }
 
 #pragma mark - Favorites Table View

@@ -36,60 +36,60 @@ static CGFloat settingsBtnWidth = 150.0;
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"0301"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0206"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0208"],
         [Scene sceneWithName:@"NFL"
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"008"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0069"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0702"],
         [Scene sceneWithName:@"NCAA"
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"0375"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0206"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0008"],
         [Scene sceneWithName:@"News 1"
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"0046"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0204"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0206"],
         [Scene sceneWithName:@"News 2"
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"0050"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0360"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0202"],
         [Scene sceneWithName:@"Business"
                  leftTvInput:InputDeviceTimeWarnerDvr
                     leftTvIr:IRDeviceTimeWarnerDvr
                leftTvChannel:@"0205"
-               centerTvInput:InputDeviceDirecTvDvr
+               centerTvInput:InputDeviceTimeWarnerBox1
                   centerTvIr:IRDeviceDirecTvDvr
              centerTvChannel:@"0359"
-                rightTvInput:InputDeviceDirecTvBox
+                rightTvInput:InputDeviceTimeWarnerBox2
                    rightTvIr:IRDeviceDirecTvBox
               rightTvChannel:@"0353"]
     ];
@@ -286,7 +286,7 @@ static CGFloat settingsBtnWidth = 150.0;
     // set center TV to dvr input
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
-    [defaults setObject:@(InputDeviceDirecTvDvr) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
+    [defaults setObject:@(InputDeviceTimeWarnerBox1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
     [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceRightTv)];
     [defaults synchronize];
 

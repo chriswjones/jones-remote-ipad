@@ -78,12 +78,12 @@ static CGFloat padding = 10.0;
         [self bindInput:InputDeviceTimeWarnerDvr];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceDirecTvDvr) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceDirecTvDvr];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox1];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceDirecTvBox) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceDirecTvBox];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox2];
     }]];
 
     [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceBluRay) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -123,28 +123,15 @@ static CGFloat padding = 10.0;
     }
 
     switch (input) {
-        case InputDeviceTimeWarnerDvr: {
+        case InputDeviceTimeWarnerDvr:
+        case InputDeviceTimeWarnerBox1:
+        case InputDeviceTimeWarnerBox2: {
             if (!_timeWarner) {
                 _timeWarner = [[TimeWarnerRemoteViewController alloc] init];
                 _timeWarner.view.backgroundColor = _remoteContainer.backgroundColor;
             }
+            [_direcTv bindInput:IRDeviceDirecTvBox];
             _curRemoteVc = _timeWarner;
-            break;
-        }
-        case InputDeviceDirecTvDvr:
-        case InputDeviceDirecTvBox: {
-            if (!_direcTv) {
-                _direcTv = [[DirecTvRemoteViewController alloc] init];
-                _direcTv.view.backgroundColor = _remoteContainer.backgroundColor;
-            }
-
-            if (input == InputDeviceDirecTvDvr) {
-                [_direcTv bindInput:IRDeviceDirecTvDvr];
-            } else {
-                [_direcTv bindInput:IRDeviceDirecTvBox];
-            }
-
-            _curRemoteVc = _direcTv;
             break;
         }
         case InputDeviceBluRay: {

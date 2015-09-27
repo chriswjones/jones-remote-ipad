@@ -7,5 +7,6 @@
 
 @interface TimeWarnerRemoteViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (void)bindInput:(enum IRDevice)irDevice;
 
 @end

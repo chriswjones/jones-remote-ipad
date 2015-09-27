@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75738e6e-8712-44f6-900b-b605281ff5c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jones-remote-ipad.iml" afterPath="$PROJECT_DIR$/.idea/jones-remote-ipad.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jones-remote-ipad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,65 +24,72 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPad_Retina_8.1_i386_2" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
   <component name="FavoritesManager">
     <favorites_list name="JonesRemote" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DirecTvRemoteViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DirecTvRemoteViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6132287" vertical-offset="3563" max-vertical-offset="4515">
-              <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
               <folding>
-                <element signature="e#517#12499#0" expanded="true" />
-                <element signature="e#18141#18239#0" expanded="true" />
+                <element signature="e#12501#12570#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirecTvDvr.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
+      <file leaf-file-name="DirecTvRemoteViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-              <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirecTvBox.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
+      <file leaf-file-name="TvViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="1320">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+              <folding>
+                <element signature="e#2433#4386#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeWarnerDVR.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m">
+      <file leaf-file-name="MatrixEnum.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
+              <folding>
+                <element signature="e#512#873#0" expanded="true" />
+                <element signature="e#875#1665#0" expanded="true" />
+                <element signature="e#1667#2577#0" expanded="true" />
+                <element signature="e#2579#3360#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeWarnerRemoteViewController.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TimeWarnerRemoteViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2288" max-vertical-offset="4890">
-              <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
+            <state vertical-scroll-proportion="7.568792">
+              <caret line="442" column="80" selection-start-line="442" selection-start-column="80" selection-end-line="442" selection-end-column="80" />
               <folding>
-                <element signature="e#20806#20904#0" expanded="true" />
+                <element signature="e#523#13961#0" expanded="true" />
+                <element signature="e#13963#14032#0" expanded="true" />
+                <element signature="e#14332#15235#0" expanded="true" />
+                <element signature="e#15237#15768#0" expanded="true" />
+                <element signature="e#17727#17827#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,28 +103,34 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m" />
-        <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/Marantz.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" />
-        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m" />
+        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" />
+        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" />
+        <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" />
+        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="331" />
+    <option name="x" value="479" />
     <option name="y" value="23" />
-    <option name="width" value="1349" />
+    <option name="width" value="1202" />
     <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -258,11 +273,47 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Remotes" />
+              <option name="myItemId" value="Header" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DirecTV" />
+              <option name="myItemId" value="UserInterface" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Footer" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,28 +332,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CommandCenter" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JonesRemote" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JonesRemote" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CommandCenter" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IRDevices" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,11 +351,11 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="JonesRemote" TARGET_NAME="JonesRemoteTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="JonesRemote" TARGET_NAME="Jones Remote" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="JonesRemote" TARGET_NAME="Jones Remote" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="JonesRemote" TARGET_NAME="JonesRemoteTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
@@ -334,6 +363,7 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -405,27 +435,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="331" y="23" width="1349" height="1023" extended-state="0" />
+    <frame x="479" y="23" width="1202" height="1023" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16214587" sideWeight="0.5005359" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28463855" sideWeight="0.4994641" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16214587" sideWeight="0.5005359" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3022862" sideWeight="0.4994641" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -441,11 +471,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -455,142 +480,24 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="6345">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="e#517#12499#0" expanded="true" />
-            <element signature="e#18141#18239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="6585">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <element signature="e#20806#20904#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4575" max-vertical-offset="6015">
-          <caret line="305" column="0" selection-start-line="305" selection-start-column="0" selection-end-line="305" selection-end-column="0" />
-          <folding>
-            <element signature="e#517#12499#0" expanded="true" />
-            <element signature="e#18141#18239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1230">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6894619" vertical-offset="0" max-vertical-offset="930">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/CommandCenter.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6446188" vertical-offset="220" max-vertical-offset="1215">
-          <caret line="158" column="55" selection-start-line="158" selection-start-column="55" selection-end-line="158" selection-end-column="55" />
-          <folding>
-            <element signature="e#4644#5067#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45403588" vertical-offset="1020" max-vertical-offset="2985">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#143#182#0" expanded="false" />
-            <element signature="e#797#1632#0" expanded="false" />
-            <element signature="e#1634#1902#0" expanded="false" />
-            <element signature="e#1904#2043#0" expanded="false" />
-            <element signature="e#2045#2431#0" expanded="false" />
-            <element signature="e#4372#4460#0" expanded="false" />
-            <element signature="e#4462#7644#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73038673" vertical-offset="179" max-vertical-offset="1095">
-          <caret line="146" column="31" selection-start-line="146" selection-start-column="31" selection-end-line="146" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.353139" vertical-offset="0" max-vertical-offset="3060">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36098656" vertical-offset="1613" max-vertical-offset="3645">
-          <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
-          <folding>
-            <element signature="e#143#182#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1935">
-          <caret line="234" column="66" selection-start-line="234" selection-start-column="66" selection-end-line="234" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/Marantz.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.117713004" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="7" column="237" selection-start-line="7" selection-start-column="237" selection-end-line="7" selection-end-column="237" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
           <folding />
         </state>
@@ -598,7 +505,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="1320">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
@@ -606,7 +513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
@@ -614,21 +521,371 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2288" max-vertical-offset="4890">
+        <state vertical-scroll-proportion="0.0">
           <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
           <folding>
-            <element signature="e#20806#20904#0" expanded="true" />
+            <element signature="e#523#13961#0" expanded="true" />
+            <element signature="e#13963#14032#0" expanded="true" />
+            <element signature="e#14332#15235#0" expanded="true" />
+            <element signature="e#15237#15768#0" expanded="true" />
+            <element signature="e#17727#17827#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6132287" vertical-offset="3563" max-vertical-offset="4515">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
+          <folding>
+            <element signature="e#523#13961#0" expanded="true" />
+            <element signature="e#13963#14032#0" expanded="true" />
+            <element signature="e#14332#15235#0" expanded="true" />
+            <element signature="e#15237#15768#0" expanded="true" />
+            <element signature="e#17727#17827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="367" column="0" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
           <folding>
-            <element signature="e#517#12499#0" expanded="true" />
-            <element signature="e#18141#18239#0" expanded="true" />
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
+          <folding>
+            <element signature="e#523#13961#0" expanded="true" />
+            <element signature="e#13963#14032#0" expanded="true" />
+            <element signature="e#14332#15235#0" expanded="true" />
+            <element signature="e#15237#15768#0" expanded="true" />
+            <element signature="e#17727#17827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#523#13961#0" expanded="true" />
+            <element signature="e#13963#14032#0" expanded="true" />
+            <element signature="e#14332#15235#0" expanded="true" />
+            <element signature="e#15237#15768#0" expanded="true" />
+            <element signature="e#17727#17827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="305" column="0" selection-start-line="305" selection-start-column="0" selection-end-line="305" selection-end-column="0" />
+          <folding>
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.353139">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/Marantz.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.117713004">
+          <caret line="7" column="237" selection-start-line="7" selection-start-column="237" selection-end-line="7" selection-end-column="237" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvDvr.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.107419714">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/DirecTvBox.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.093023255">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/ShellViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding>
+            <element signature="e#2522#2608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="150" column="30" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
+          <folding>
+            <element signature="e#589#6332#0" expanded="true" />
+            <element signature="e#6334#7017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/RemoteButton.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
+          <folding>
+            <element signature="e#213#703#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/RemotePanel.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="e#206#880#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/CommandCenter.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.216443">
+          <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#939#1727#0" expanded="true" />
+            <element signature="e#1729#2329#0" expanded="true" />
+            <element signature="e#2331#2679#0" expanded="true" />
+            <element signature="e#2714#3047#0" expanded="true" />
+            <element signature="e#3049#3385#0" expanded="true" />
+            <element signature="e#3387#3711#0" expanded="true" />
+            <element signature="e#3713#4066#0" expanded="true" />
+            <element signature="e#4100#4369#0" expanded="true" />
+            <element signature="e#4371#4642#0" expanded="true" />
+            <element signature="e#4644#5067#0" expanded="true" />
+            <element signature="e#5097#5289#0" expanded="true" />
+            <element signature="e#5291#5523#0" expanded="true" />
+            <element signature="e#5525#6259#0" expanded="true" />
+            <element signature="e#6261#7131#0" expanded="true" />
+            <element signature="e#7133#7805#0" expanded="true" />
+            <element signature="e#7807#8317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6107383">
+          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+          <folding>
+            <element signature="e#2216#2406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19630873">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4194631">
+          <caret line="164" column="24" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+          <folding>
+            <element signature="e#5200#5365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/RemotePanel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19630873">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="240" column="1" selection-start-line="240" selection-start-column="1" selection-end-line="240" selection-end-column="1" />
+          <folding>
+            <element signature="e#12501#12570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
+          <folding>
+            <element signature="e#512#873#0" expanded="true" />
+            <element signature="e#875#1665#0" expanded="true" />
+            <element signature="e#1667#2577#0" expanded="true" />
+            <element signature="e#2579#3360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding>
+            <element signature="e#2433#4386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.568792">
+          <caret line="442" column="80" selection-start-line="442" selection-start-column="80" selection-end-line="442" selection-end-column="80" />
+          <folding>
+            <element signature="e#523#13961#0" expanded="true" />
+            <element signature="e#13963#14032#0" expanded="true" />
+            <element signature="e#14332#15235#0" expanded="true" />
+            <element signature="e#15237#15768#0" expanded="true" />
+            <element signature="e#17727#17827#0" expanded="true" />
           </folding>
         </state>
       </provider>

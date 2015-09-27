@@ -161,12 +161,12 @@ static CGFloat iconBtnWidth = 100.0;
         [self bindInput:InputDeviceTimeWarnerDvr];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceDirecTvDvr) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceDirecTvDvr];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox1) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox1];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceDirecTvBox) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self bindInput:InputDeviceDirecTvBox];
+    [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceTimeWarnerBox2) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self bindInput:InputDeviceTimeWarnerBox2];
     }]];
 
     [alert addAction:[UIAlertAction actionWithTitle:stringForInputDevice(InputDeviceBluRay) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
