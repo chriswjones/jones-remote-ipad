@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75738e6e-8712-44f6-900b-b605281ff5c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/AppDelegate.m" afterPath="$PROJECT_DIR$/JonesRemote/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/CommandCenter.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/CommandCenter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Footer/FooterViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/Info.plist" afterPath="$PROJECT_DIR$/JonesRemote/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemoteTests/Info.plist" afterPath="$PROJECT_DIR$/JonesRemoteTests/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" afterPath="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" afterPath="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JonesRemote.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/JonesRemote.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="jones-remote-ipad.iws" />
@@ -51,18 +39,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.740741">
               <caret line="537" column="23" selection-start-line="537" selection-start-column="23" selection-end-line="537" selection-end-column="23" />
-              <folding />
+              <folding>
+                <marker date="1443379332000" expanded="false" signature="38773:38800" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TvViewController.m" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m">
+      <file leaf-file-name="HeaderViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3979933">
-              <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.76086956">
+              <caret line="330" column="107" selection-start-line="330" selection-start-column="107" selection-end-line="330" selection-end-column="107" />
               <folding>
-                <element signature="e#2433#4386#0" expanded="true" />
+                <element signature="e#610#6401#0" expanded="true" />
+                <element signature="e#7740#11712#0" expanded="true" />
+                <element signature="e#11714#13007#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,7 +105,7 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <element signature="e#877#1665#0" expanded="true" />
-                <element signature="e#1667#2776#0" expanded="true" />
+                <element signature="e#877#1665#0" expanded="true" />
                 <element signature="e#3060#3408#0" expanded="true" />
                 <element signature="e#3443#3776#0" expanded="true" />
                 <element signature="e#3778#4114#0" expanded="true" />
@@ -128,6 +120,7 @@
                 <element signature="e#6993#7877#0" expanded="true" />
                 <element signature="e#7879#8559#0" expanded="true" />
                 <element signature="e#8561#9079#0" expanded="true" />
+                <marker date="1443380373000" expanded="true" signature="647:9081" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -148,13 +141,13 @@
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/DirecTV/DirecTvRemoteViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.h" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/MatrixEnum.h" />
-        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Remotes/TimeWarner/TimeWarnerRemoteViewController.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IREnum.h" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/TimeWarnerDVR.m" />
         <option value="$PROJECT_DIR$/JonesRemote/CommandCenter/CommandCenter.m" />
         <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m" />
+        <option value="$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m" />
       </list>
     </option>
   </component>
@@ -167,8 +160,9 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="273" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
+    <option name="width" value="1407" />
     <option name="height" value="1023" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -243,6 +237,10 @@
               <option name="myItemId" value="UserInterface" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shell" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -289,6 +287,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TimeWarner" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserInterface" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Header" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JonesRemote" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserInterface" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,7 +431,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <frame x="273" y="23" width="1407" height="1023" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -402,7 +440,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21518987" sideWeight="0.4994641" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.4994641" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16214587" sideWeight="0.5005359" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -466,7 +504,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="13" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
           <folding>
+            <element signature="e#2045#2431#0" expanded="true" />
             <element signature="e#2433#4386#0" expanded="true" />
+            <element signature="e#4478#7564#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -476,10 +516,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="87" selection-start-line="40" selection-start-column="87" selection-end-line="40" selection-end-column="87" />
           <folding>
-            <element signature="e#514#875#0" expanded="true" />
-            <element signature="e#877#1667#0" expanded="true" />
-            <element signature="e#1669#2579#0" expanded="true" />
-            <element signature="e#2581#3362#0" expanded="true" />
+            <element signature="e#514#875#0" expanded="false" />
+            <element signature="e#877#1667#0" expanded="false" />
+            <element signature="e#1669#2579#0" expanded="false" />
+            <element signature="e#2581#3362#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -490,7 +530,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#547#38729#0" expanded="false" />
-            <element signature="e#547#38729#0" expanded="false" />
+            <element signature="e#38731#38800#0" expanded="false" />
             <element signature="e#39438#40692#0" expanded="false" />
             <element signature="e#40694#41513#0" expanded="false" />
             <element signature="e#43473#43573#0" expanded="false" />
@@ -538,7 +578,7 @@
           <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
           <folding>
             <element signature="e#547#38729#0" expanded="false" />
-            <element signature="e#547#38729#0" expanded="false" />
+            <element signature="e#38731#38800#0" expanded="false" />
             <element signature="e#39438#40692#0" expanded="false" />
             <element signature="e#40694#41513#0" expanded="false" />
             <element signature="e#43473#43573#0" expanded="false" />
@@ -586,7 +626,7 @@
           <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
           <folding>
             <element signature="e#547#38729#0" expanded="false" />
-            <element signature="e#547#38729#0" expanded="false" />
+            <element signature="e#38731#38800#0" expanded="false" />
             <element signature="e#39438#40692#0" expanded="false" />
             <element signature="e#40694#41513#0" expanded="false" />
             <element signature="e#43473#43573#0" expanded="false" />
@@ -634,7 +674,7 @@
           <caret line="195" column="32" selection-start-line="188" selection-start-column="4" selection-end-line="195" selection-end-column="32" />
           <folding>
             <element signature="e#547#38729#0" expanded="false" />
-            <element signature="e#547#38729#0" expanded="false" />
+            <element signature="e#38731#38800#0" expanded="false" />
             <element signature="e#39438#40692#0" expanded="false" />
             <element signature="e#40694#41513#0" expanded="false" />
             <element signature="e#43473#43573#0" expanded="false" />
@@ -658,7 +698,7 @@
           <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#547#38729#0" expanded="false" />
-            <element signature="e#547#38729#0" expanded="false" />
+            <element signature="e#38731#38800#0" expanded="false" />
             <element signature="e#39438#40692#0" expanded="false" />
             <element signature="e#40694#41513#0" expanded="false" />
             <element signature="e#43473#43573#0" expanded="false" />
@@ -797,10 +837,10 @@
         <state vertical-scroll-proportion="0.44147158">
           <caret line="170" column="12" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
           <folding>
-            <element signature="e#514#875#0" expanded="true" />
-            <element signature="e#877#1667#0" expanded="true" />
-            <element signature="e#1669#2579#0" expanded="true" />
-            <element signature="e#2581#3362#0" expanded="true" />
+            <element signature="e#514#875#0" expanded="false" />
+            <element signature="e#877#1667#0" expanded="false" />
+            <element signature="e#1669#2579#0" expanded="false" />
+            <element signature="e#2581#3362#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,7 +849,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.740741">
           <caret line="537" column="23" selection-start-line="537" selection-start-column="23" selection-end-line="537" selection-end-column="23" />
-          <folding />
+          <folding>
+            <marker date="1443379332000" expanded="false" signature="38773:38800" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -844,16 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54347825">
-          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-          <folding>
-            <element signature="e#7719#12957#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/CommandCenter/IRDevices/BluRay.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1187291">
@@ -885,7 +917,7 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <element signature="e#877#1665#0" expanded="true" />
-            <element signature="e#1667#2776#0" expanded="true" />
+            <element signature="e#877#1665#0" expanded="true" />
             <element signature="e#3060#3408#0" expanded="true" />
             <element signature="e#3443#3776#0" expanded="true" />
             <element signature="e#3778#4114#0" expanded="true" />
@@ -900,6 +932,7 @@
             <element signature="e#6993#7877#0" expanded="true" />
             <element signature="e#7879#8559#0" expanded="true" />
             <element signature="e#8561#9079#0" expanded="true" />
+            <marker date="1443380373000" expanded="true" signature="647:9081" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -914,10 +947,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3979933">
-          <caret line="132" column="42" selection-start-line="132" selection-start-column="42" selection-end-line="132" selection-end-column="42" />
+        <state vertical-scroll-proportion="-0.8043478">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
           <folding>
+            <element signature="e#2045#2431#0" expanded="true" />
             <element signature="e#2433#4386#0" expanded="true" />
+            <element signature="e#4478#7564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Shell/TvViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JonesRemote/UserInterface/Header/HeaderViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76086956">
+          <caret line="330" column="107" selection-start-line="330" selection-start-column="107" selection-end-line="330" selection-end-column="107" />
+          <folding>
+            <element signature="e#610#6401#0" expanded="true" />
+            <element signature="e#7740#11712#0" expanded="true" />
+            <element signature="e#11714#13007#0" expanded="true" />
           </folding>
         </state>
       </provider>

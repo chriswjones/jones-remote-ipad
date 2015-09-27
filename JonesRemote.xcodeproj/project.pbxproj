@@ -17,7 +17,6 @@
 		5A416519876CC4904A150D4F /* HeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */; };
 		5A41663CE7A7883AB013A10B /* DirecTvRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */; };
 		5A4166C35F46BF99292D97E9 /* RemoteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4168D43E0EB8D91E11A816 /* RemoteButton.m */; };
-		5A4167ADF2E2714110A38A7F /* JonesRemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416D8B7395A59A4AE50BC2 /* JonesRemoteTests.m */; };
 		5A4169BF5A53AF07C48DC7D7 /* TimeWarnerRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416CDFF7126C921B94DDBC /* TimeWarnerRemoteViewController.m */; };
 		5A416A10E60B722CE1BC5790 /* DirecTvBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */; };
 		5A416A66FCE3EBD77C152732 /* RemotePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4169DA4B5A31005EBD192C /* RemotePanel.m */; };
@@ -34,22 +33,11 @@
 		5A416F30866E5338A1110A4B /* BluRayRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5A41698EED3A65AAA5FB92DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A416945C07CB4EDD8E802AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A41691C6A702968C786E35F;
-			remoteInfo = JonesRemote;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewController.m; sourceTree = "<group>"; };
 		5A41606294FB42E14C6618AA /* IREnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IREnum.h; sourceTree = "<group>"; };
 		5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvBox.m; sourceTree = "<group>"; };
-		5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JonesRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4160B5CC083156AE83AB4B /* BluRay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluRay.h; sourceTree = "<group>"; };
 		5A4160F0AF190FC482C12A4D /* FooterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterViewController.h; sourceTree = "<group>"; };
 		5A41610A534C4FB1BD8230ED /* FooterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterViewController.m; sourceTree = "<group>"; };
@@ -103,13 +91,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A4161075CD8E73FE4091E63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A41642F6A615D2CB30F8D71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				5A416A6C86D8E4E5DBC773C5 /* Jones Remote.app */,
-				5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,24 +344,6 @@
 			productReference = 5A416A6C86D8E4E5DBC773C5 /* Jones Remote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A416B68211D43360E760625 /* JonesRemoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A416573E095CADF4D9D65D3 /* Build configuration list for PBXNativeTarget "JonesRemoteTests" */;
-			buildPhases = (
-				5A416C6910DC21BEF74E022B /* Sources */,
-				5A4161075CD8E73FE4091E63 /* Frameworks */,
-				5A416F1B6783BF159F01306C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A416F9E5520B9A7B2961A8F /* PBXTargetDependency */,
-			);
-			name = JonesRemoteTests;
-			productName = JonesRemoteTests;
-			productReference = 5A4160A6A00469E04D42063D /* JonesRemoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -409,7 +371,6 @@
 			projectRoot = "";
 			targets = (
 				5A41691C6A702968C786E35F /* Jones Remote */,
-				5A416B68211D43360E760625 /* JonesRemoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -422,13 +383,6 @@
 				5A416C78091AB581E348EFD7 /* Images.xcassets in Resources */,
 				5A4161267C26AC0945BE321A /* LaunchScreen.xib in Resources */,
 				5A41624ABD3FF45E31FD7C75 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A416F1B6783BF159F01306C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,23 +449,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A416C6910DC21BEF74E022B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A4167ADF2E2714110A38A7F /* JonesRemoteTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5A416F9E5520B9A7B2961A8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A41691C6A702968C786E35F /* Jones Remote */;
-			targetProxy = 5A41698EED3A65AAA5FB92DB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5A4166FFACDA5D992F52087E /* Main.storyboard */ = {
@@ -533,19 +471,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5A41610D8F9B1B52FB7AB159 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JonesRemote.app/JonesRemote";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = JonesRemoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.axis.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
 		5A4161C407D1A691D3763B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,19 +513,6 @@
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
-		};
-		5A4163DF611315B20E4DE000 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JonesRemote.app/JonesRemote";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = JonesRemoteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.axis.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
 		};
 		5A4164429122F9454F31EC7C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -667,15 +579,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A416573E095CADF4D9D65D3 /* Build configuration list for PBXNativeTarget "JonesRemoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A41610D8F9B1B52FB7AB159 /* Debug */,
-				5A4163DF611315B20E4DE000 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5A416C2D6E12AAC8BC04698B /* Build configuration list for PBXProject "JonesRemote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

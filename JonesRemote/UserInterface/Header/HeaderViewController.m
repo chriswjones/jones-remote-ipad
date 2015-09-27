@@ -26,6 +26,7 @@ static CGFloat settingsBtnWidth = 150.0;
     UIColor *_activeItemColor;
 
     NSArray *_sceneData;
+    BOOL _sportsBar;
 }
 
 - (void)viewDidLoad {
@@ -197,24 +198,13 @@ static CGFloat settingsBtnWidth = 150.0;
     [alert popoverPresentationController].sourceRect = sender.bounds;
 
     [alert addAction:[UIAlertAction actionWithTitle:@"Power System On" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [[CommandCenter singleton] powerMatrixOn];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceMarantz];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceLeftTv];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
+        _sportsBar = NO;
+        [self startPowerOn];
+    }]];
 
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr1];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr2];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerBox];
-        [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
-
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
-        hud.labelText = @"Powering On";
-        [NSTimer scheduledTimerWithTimeInterval:30.0
-                                         target:self
-                                       selector:@selector(finishPowerOn)
-                                       userInfo:nil
-                                        repeats:NO];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Power Sports Bar On " style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        _sportsBar = YES;
+        [self startPowerOn];
     }]];
 
     [alert addAction:[UIAlertAction actionWithTitle:@"Power Music On" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -261,47 +251,87 @@ static CGFloat settingsBtnWidth = 150.0;
                                         repeats:NO];
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:@"Re-Connect" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [[CommandCenter singleton] connectSockets];
-    }]];
-
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)startPowerOn {
+    [[CommandCenter singleton] powerMatrixOn];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceMarantz];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceLeftTv];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceCenterTv];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOff toIRDevice:IRDeviceRightTv];
+
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr1];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerDvr2];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceTimeWarnerBox];
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOnOff toIRDevice:IRDeviceBluRay];
+
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.parentViewController.view animated:YES];
+    hud.labelText = @"Powering On";
+    [NSTimer scheduledTimerWithTimeInterval:30.0
+                                     target:self
+                                   selector:@selector(finishPowerOn)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
 - (void)finishPowerOn {
-    // set DVR channel to default channel
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr2];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceTimeWarnerDvr2];
-
-    // Set other boxes to default channels
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerBox];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand5 toIRDevice:IRDeviceTimeWarnerBox];
-
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
 
     // set center TV to dvr input
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
-    [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
-    [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceRightTv)];
-    [defaults synchronize];
+    if (_sportsBar) {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand3 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand3 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr2];
+
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand8 toIRDevice:IRDeviceTimeWarnerBox];
+
+        [defaults setObject:@(InputDeviceTimeWarnerDvr2) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
+        [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
+        [defaults setObject:@(InputDeviceTimeWarnerBox) forKey:stringForOutputDevice(OutputDeviceRightTv)];
+        [defaults synchronize];
+    }else {
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];
+
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr2];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr2];
+
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerBox];
+        [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerBox];
+
+        [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
+        [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
+        [defaults setObject:@(InputDeviceNone) forKey:stringForOutputDevice(OutputDeviceRightTv)];
+        [defaults synchronize];
+    }
 
     // Audio On
     [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceMarantz];
-    [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
 
     // this will set the remote, input (and audio) and power the TV On
     [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv action:YES];
-    [MBProgressHUD hideHUDForView:self.parentViewController.view animated:YES];
 
+    // Default Surround Sound mode
+    [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
 
+    // hide HUD 12 seconds later
+    [NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:NO];
 }
 
 - (void)finishPowerMusicOn {
