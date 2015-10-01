@@ -471,11 +471,11 @@ static CGFloat padding = 10.0;
 
     CGFloat halfWidth = (btnWidth - padding) / 2.f;
 
-    RemoteButton *pageUp = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, halfWidth, btnHeight) title:@"Page +"];
+    RemoteButton *pageUp = [RemoteButton buttonWithFrame:CGRectMake(xCoord, yCoord, halfWidth, btnHeight) title:@"Page Up"];
     [pageUp addTarget:self action:@selector(doPageUp) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pageUp];
 
-    RemoteButton *pageDown = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Page -"];
+    RemoteButton *pageDown = [RemoteButton buttonWithFrame:CGRectMake(xCoord + halfWidth + padding, yCoord, halfWidth, btnHeight) title:@"Page Down"];
     [pageDown addTarget:self action:@selector(doPageDown) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pageDown];
 
