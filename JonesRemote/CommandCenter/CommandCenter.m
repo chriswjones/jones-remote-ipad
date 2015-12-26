@@ -5,6 +5,7 @@
 #import "PanasonicPlasmaTV.h"
 #import "BluRay.h"
 #import "Marantz.h"
+#import "Empty.h"
 
 #define MATRIX_SOCKET_IP @"192.168.0.201"
 #define MATRIX_SOCKET_PORT 4999
@@ -79,22 +80,27 @@ SINGLETON(CommandCenter)
         [_ir2Socket connectToHost:IR2_SOCKET_IP onPort:IR2_SOCKET_PORT error:nil];
     }
 
-    if (_emptyTimer) {
-        [_emptyTimer invalidate];
-        _emptyTimer = nil;
-    }
-    _emptyTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(sendEmpty) userInfo:nil repeats:NO];
+//    if (_emptyTimer) {
+//        [_emptyTimer invalidate];
+//        _emptyTimer = nil;
+//    }
+//    _emptyTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(sendEmpty) userInfo:nil repeats:NO];
 }
 
-- (void)sendEmpty {
-    // send an empty to command to each of the IR hubs (choosing one device from each)
-    NSLog(@"sending empty!");
-    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr1];
-    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr2];
-    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerBox];
-    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceBluRay];
-    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceMarantz];
+- (void)fireEmptyCommands {
+    [self sendQueableIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyA];
+    [self sendQueableIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyB];
 }
+
+//- (void)sendEmpty {
+//    // send an empty to command to each of the IR hubs (choosing one device from each)
+//    NSLog(@"sending empty!");
+//    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr1];
+//    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerDvr2];
+//    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceTimeWarnerBox];
+//    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceBluRay];
+//    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceMarantz];
+//}
 
 - (void)disconnectSockets {
     if ([_matrixSocket isConnected]) {
@@ -233,6 +239,10 @@ SINGLETON(CommandCenter)
         case IRDeviceMarantz:
             class = [Marantz class];
             break;
+        case IRDeviceEmptyA:
+        case IRDeviceEmptyB:
+            class = [Empty class];
+            break;
         default:
             NSLog(@"Error, unrecognized ir device: %d", irDevice);
             break;
@@ -253,12 +263,18 @@ SINGLETON(CommandCenter)
             return @"5:1";
         case IRDeviceCenterTv:
             return @"5:2";
-        case IRDeviceRightTv:
-            return @"5:3";
+
         case IRDeviceBluRay:
             return @"4:1";
         case IRDeviceMarantz:
             return @"4:2";
+        case IRDeviceRightTv:
+            return @"4:3";
+            
+        case IRDeviceEmptyA:
+        case IRDeviceEmptyB:
+            return @"5:3";
+            
         default:
             NSLog(@"Error, unrecognized ir device: %d", irDevice);
             return @"";
@@ -268,14 +284,16 @@ SINGLETON(CommandCenter)
 - (GCDAsyncSocket *)socketForIRDevice:(enum IRDevice)device {
     switch (device) {
         case IRDeviceLeftTv:
-        case IRDeviceRightTv:
         case IRDeviceCenterTv:
         case IRDeviceTimeWarnerDvr1:
         case IRDeviceTimeWarnerDvr2:
         case IRDeviceTimeWarnerBox:
+        case IRDeviceEmptyA:
             return _ir1Socket;
         case IRDeviceBluRay:
         case IRDeviceMarantz:
+        case IRDeviceRightTv:
+        case IRDeviceEmptyB:
             return _ir2Socket;
         default:
             NSLog(@"Error, unrecognized ir device: %d", device);

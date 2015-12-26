@@ -38,7 +38,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     NSLog(@"Application did become active!");
-    [self connectSockets];
+//    [self connectSockets];
+    [self fireEmptyCommands];
     if (_socketTimer) {
         [_socketTimer invalidate];
         _socketTimer = nil;
@@ -46,13 +47,18 @@
     _socketTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
 }
 
-- (void)connectSockets {
-    [[CommandCenter singleton] connectSockets];
+//- (void)connectSockets {
+//    [[CommandCenter singleton] connectSockets];
+//}
+
+- (void)fireEmptyCommands {
+    [[CommandCenter singleton] fireEmptyCommands];
 }
 
 -(void)runTimer{
     NSLog(@"Reconnect timer fired!");
-    [self connectSockets];
+//    [self connectSockets];
+    [self fireEmptyCommands];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -31,6 +31,7 @@
 		5A416DFD366056F329E664A8 /* Marantz.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416D5B58F8CBA7211B1AEB /* Marantz.m */; };
 		5A416E7D5DC09049CABF9380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41625D3ED3C26E31F7F03B /* main.m */; };
 		5A416F30866E5338A1110A4B /* BluRayRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */; };
+		83726EDE1C2F005500500F77 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 83726EDD1C2F005500500F77 /* Empty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		5A416F18249816EE4DBF3682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5A416F1EC9B2769A1CC52B09 /* DirecTvBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirecTvBox.h; sourceTree = "<group>"; };
 		5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvRemoteViewController.m; sourceTree = "<group>"; };
+		83726EDC1C2F005500500F77 /* Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empty.h; sourceTree = "<group>"; };
+		83726EDD1C2F005500500F77 /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
 		93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF3761C5519A0D6DADEFF2DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -278,6 +281,8 @@
 		5A416DDB89E402593B3F1C8B /* IRDevices */ = {
 			isa = PBXGroup;
 			children = (
+				83726EDC1C2F005500500F77 /* Empty.h */,
+				83726EDD1C2F005500500F77 /* Empty.m */,
 				5A4160B5CC083156AE83AB4B /* BluRay.h */,
 				5A416E9CC990EA70DB4A02D0 /* BluRay.m */,
 				5A4168F1ECDA2A28B849EEC5 /* DirecTvDvr.h */,
@@ -438,6 +443,7 @@
 				5A416DFD366056F329E664A8 /* Marantz.m in Sources */,
 				5A416305A659650DBFBD66F5 /* TimeWarnerDVR.m in Sources */,
 				5A416AA9F69582AF302E3629 /* PanasonicPlasmaTV.m in Sources */,
+				83726EDE1C2F005500500F77 /* Empty.m in Sources */,
 				5A416A66FCE3EBD77C152732 /* RemotePanel.m in Sources */,
 				5A4166C35F46BF99292D97E9 /* RemoteButton.m in Sources */,
 				5A416D6E883FACCA718F994C /* FavoriteChannel.m in Sources */,

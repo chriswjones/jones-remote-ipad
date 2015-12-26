@@ -21,4 +21,6 @@
 
 - (void)sendQueableIRCommand:(enum IRCommand)irCommand toIRDevice:(enum IRDevice)irDevice;
 
+- (void)fireEmptyCommands;
+
 @end

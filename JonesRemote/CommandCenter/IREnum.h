@@ -194,7 +194,10 @@ NS_ENUM(int, IRDevice) {
     IRDeviceCenterTv,
     IRDeviceRightTv,
     IRDeviceMarantz,
-    IRDeviceNone
+    IRDeviceNone,
+    
+    IRDeviceEmptyA,
+    IRDeviceEmptyB
 };
 
 static inline NSString *stringForIRDevice(enum IRDevice irDevice) {
