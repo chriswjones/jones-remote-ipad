@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    if (_socketTimer) {
+        [_socketTimer invalidate];
+        _socketTimer = nil;
+    }
+    _socketTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
+
+    [CommandCenter singleton];    
+    
     return YES;
 }
 
@@ -33,32 +42,21 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+//        [[CommandCenter singleton] connectSockets];
+//        [[CommandCenter singleton] fireEmptyCommands];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     NSLog(@"Application did become active!");
-//    [self connectSockets];
-    [self fireEmptyCommands];
-    if (_socketTimer) {
-        [_socketTimer invalidate];
-        _socketTimer = nil;
-    }
-    _socketTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
-}
-
-//- (void)connectSockets {
-//    [[CommandCenter singleton] connectSockets];
-//}
-
-- (void)fireEmptyCommands {
+    [[CommandCenter singleton] connectSockets];
     [[CommandCenter singleton] fireEmptyCommands];
 }
 
 -(void)runTimer{
     NSLog(@"Reconnect timer fired!");
-//    [self connectSockets];
-    [self fireEmptyCommands];
+    [[CommandCenter singleton] connectSockets];
+    [[CommandCenter singleton] fireEmptyCommands];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

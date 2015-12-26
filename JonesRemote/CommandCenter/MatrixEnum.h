@@ -4,7 +4,8 @@ NS_ENUM(int, OutputDevice) {
   OutputDeviceRightTv,
   OutputDeviceAudioZone1,
   OutputDeviceAudioZoneHeadphones,
-  OutputDeviceAudioZone3
+  OutputDeviceAudioZone3,
+  OutputDeviceNone
 };
 
 NS_ENUM(int, InputDevice) {
@@ -65,6 +66,11 @@ static inline NSData *matrixCommandDataForOutputDevice(enum OutputDevice outputD
       string = @"f";
       break;
     }
+      case OutputDeviceNone: {
+          string = @"g";
+          break;
+      }
+          
     default: {
       string = @"";
       NSLog(@"MatrixEnum: Error, unrecognized output device: %d", outputDevice);

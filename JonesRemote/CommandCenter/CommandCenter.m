@@ -88,8 +88,9 @@ SINGLETON(CommandCenter)
 }
 
 - (void)fireEmptyCommands {
-    [self sendQueableIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyA];
-    [self sendQueableIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyB];
+    [self setMatrixInput:InputDeviceNone toOutput:OutputDeviceNone];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyA];
+    [self sendIRCommand:IRCommandEmpty toIRDevice:IRDeviceEmptyB];
 }
 
 //- (void)sendEmpty {
@@ -130,6 +131,7 @@ SINGLETON(CommandCenter)
     } else if (sock == _ir2Socket) {
         NSLog(@"IR 2 Socket Connected");
     }
+    [self fireEmptyCommands];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
