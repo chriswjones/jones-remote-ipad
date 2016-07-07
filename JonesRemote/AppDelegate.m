@@ -9,6 +9,7 @@
 
 #import "AppDelegate.h"
 #import "CommandCenter.h"
+@import HockeySDK;
 
 
 @implementation AppDelegate {
@@ -24,7 +25,12 @@
     }
     _socketTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target:self selector:@selector(runTimer) userInfo:nil repeats:YES];
 
-    [CommandCenter singleton];    
+    [CommandCenter singleton];
+    
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"780362123a3544fba142be00517d2d57"];
+    // Do some additional configuration if needed here
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     return YES;
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AEB3A094490A9022E8BCA7B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3761C5519A0D6DADEFF2DB /* libPods.a */; };
 		5A416003B0C5DE4C538334E9 /* BluRay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E9CC990EA70DB4A02D0 /* BluRay.m */; };
 		5A4161267C26AC0945BE321A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A41687DB6AD7C582A9F097A /* LaunchScreen.xib */; };
 		5A416187D77249126AF2B60E /* ShellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4167BE7F1A3ED66AF8E9A7 /* ShellViewController.m */; };
@@ -32,10 +31,12 @@
 		5A416E7D5DC09049CABF9380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41625D3ED3C26E31F7F03B /* main.m */; };
 		5A416F30866E5338A1110A4B /* BluRayRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A416E184F86B13553D755D6 /* BluRayRemoteViewController.m */; };
 		83726EDE1C2F005500500F77 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 83726EDD1C2F005500500F77 /* Empty.m */; };
+		F3AA969D7685454CBAC34B85 /* libPods-Jones Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 025DE69B9DF95F9661CDEDE3 /* libPods-Jones Remote.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		025DE69B9DF95F9661CDEDE3 /* libPods-Jones Remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jones Remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EABDA700F8C097DABE87C81 /* Pods-Jones Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jones Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jones Remote/Pods-Jones Remote.debug.xcconfig"; sourceTree = "<group>"; };
 		5A41600B2B61AB0AF62AE7D5 /* HeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewController.m; sourceTree = "<group>"; };
 		5A41606294FB42E14C6618AA /* IREnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IREnum.h; sourceTree = "<group>"; };
 		5A4160A42292A0BF21EEBA61 /* DirecTvBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvBox.m; sourceTree = "<group>"; };
@@ -87,10 +88,9 @@
 		5A416F18249816EE4DBF3682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5A416F1EC9B2769A1CC52B09 /* DirecTvBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirecTvBox.h; sourceTree = "<group>"; };
 		5A416FF4AA9CE753E1EEA831 /* DirecTvRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirecTvRemoteViewController.m; sourceTree = "<group>"; };
+		6AC3A0834071BF54CE011905 /* Pods-Jones Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jones Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jones Remote/Pods-Jones Remote.release.xcconfig"; sourceTree = "<group>"; };
 		83726EDC1C2F005500500F77 /* Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empty.h; sourceTree = "<group>"; };
 		83726EDD1C2F005500500F77 /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FF3761C5519A0D6DADEFF2DB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +98,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AEB3A094490A9022E8BCA7B /* libPods.a in Frameworks */,
+				F3AA969D7685454CBAC34B85 /* libPods-Jones Remote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E89052A25FEB51C0F0219F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1EABDA700F8C097DABE87C81 /* Pods-Jones Remote.debug.xcconfig */,
+				6AC3A0834071BF54CE011905 /* Pods-Jones Remote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A4161D069AD3895C0150BE3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,26 +314,17 @@
 				5A4164155D7C24056909E736 /* Products */,
 				5A4166DB84A255D7592F23D5 /* JonesRemote */,
 				5A416572DAF2315C107FC4CA /* JonesRemoteTests */,
-				F06BF8215F7EB1BC9D4DADDB /* Pods */,
-				F04A9936525D72B626C9A67D /* Frameworks */,
+				0E89052A25FEB51C0F0219F1 /* Pods */,
+				5E5C285B78CDDB5C3A2942B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F04A9936525D72B626C9A67D /* Frameworks */ = {
+		5E5C285B78CDDB5C3A2942B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF3761C5519A0D6DADEFF2DB /* libPods.a */,
+				025DE69B9DF95F9661CDEDE3 /* libPods-Jones Remote.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F06BF8215F7EB1BC9D4DADDB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */,
-				93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,11 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A416D9C2E9220CB4F167CB8 /* Build configuration list for PBXNativeTarget "Jones Remote" */;
 			buildPhases = (
-				BDB67BBBB903CA6CF07D638C /* Check Pods Manifest.lock */,
+				FEA610CE8BBEC4C529801699 /* [CP] Check Pods Manifest.lock */,
 				5A41646281EC930A30145A58 /* Sources */,
 				5A41642F6A615D2CB30F8D71 /* Frameworks */,
 				5A41690C92D6481C4003544B /* Resources */,
-				7CB5C4F2B830FC40055A560B /* Copy Pods Resources */,
+				168897C709EFC56A170E1081 /* [CP] Embed Pods Frameworks */,
+				4360D84270BD5C14483E9164 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,29 +395,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7CB5C4F2B830FC40055A560B /* Copy Pods Resources */ = {
+		168897C709EFC56A170E1081 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jones Remote/Pods-Jones Remote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BDB67BBBB903CA6CF07D638C /* Check Pods Manifest.lock */ = {
+		4360D84270BD5C14483E9164 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jones Remote/Pods-Jones Remote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA610CE8BBEC4C529801699 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +574,7 @@
 		};
 		5A416564B25102D6B1A67178 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4442D5019E17A6AF1FE80E2C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1EABDA700F8C097DABE87C81 /* Pods-Jones Remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -574,7 +590,7 @@
 		};
 		5A416A64253D22BB11132D1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93C97B550D0DD12A85AD8C48 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6AC3A0834071BF54CE011905 /* Pods-Jones Remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
