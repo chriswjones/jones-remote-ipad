@@ -335,12 +335,17 @@ static CGFloat settingsBtnWidth = 150.0;
         [[CommandCenter singleton] sendQueableIRCommand:IRCommandPowerOn toIRDevice:IRDeviceRightTv];
     }
     
+    [NSTimer scheduledTimerWithTimeInterval:10.0
+                                     target:self
+                                   selector:@selector(finishPowerOn2)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+- (void)finishPowerOn2 {
     [self.headerDelegate headerViewControllerSelected:OutputDeviceCenterTv action:YES];
-
-    // Default Surround Sound mode
-//    [[CommandCenter singleton] sendQueableIRCommand:IRCommandSurroundModeDolby toIRDevice:IRDeviceMarantz];
-
-    // hide HUD 12 seconds later
+    
+    // hide HUD 2 seconds later
     [NSTimer scheduledTimerWithTimeInterval:15.0 target:self selector:@selector(hideHUD) userInfo:nil repeats:NO];
 }
 
