@@ -1,7 +1,34 @@
 #import "Marantz.h"
-
+#import "CommandCenter.h"
 
 @implementation Marantz
+
++ (void)routeAudio:(enum InputDevice)input {
+    // Update matrix for all (doesnt hurt anything)
+    [[CommandCenter singleton] setMatrixInput:input toOutput:OutputDeviceAudioZone1];
+    // Swith marantz to specific marantz input based on the input device
+    [[CommandCenter singleton] sendQueableIRCommand:[Marantz irCommandForInput:input] toIRDevice:IRDeviceMarantz];
+}
+
++ (enum IRCommand)irCommandForInput:(enum InputDevice)input {
+    switch (input) {
+        case InputDeviceTimeWarnerDvr1:
+            return IRCommandMarantzInputTv;
+        case InputDeviceTimeWarnerDvr2:
+            return IRCommandMarantzInputVcr;
+        case InputDeviceBluRay:
+            return IRCommandMarantzInputDvd;
+        case InputDeviceAppleTv:
+            return IRCommandMarantzInputDss;
+        case InputDeviceTimeWarnerBox:
+        case InputDeviceMac:
+        case InputDeviceWii:
+        case InputDeviceNone:
+        default:
+            return IRCommandMarantzInputTape;
+            break;
+    }
+}
 
 + (NSString *)stringForIRCommand:(enum IRCommand)command {
     switch (command) {
@@ -43,6 +70,20 @@
             return @"36000,1,1,32,31,32,31,32,31,64,31,32,31,32,31,32,190,64,31,32,63,64,63,32,31,32,31,64,31,32,63,32,31,32,720";
         case IRCommandSurroundModeCircle:
             return @"36000,1,1,64,62,32,31,64,31,32,31,32,31,32,157,32,31,32,31,32,31,32,31,32,31,32,31,32,31,32,62,64,31,32,62,32,720";
+        case IRCommandMarantzInputTv:
+            return @"36000,1,1,32,30,64,31,32,30,32,30,32,30,32,30,32,62,32,30,32,30,32,30,32,30,32,30,32,720";
+        case IRCommandMarantzInputDvd:
+            return @"36000,1,1,32,31,32,31,32,31,64,31,32,31,32,31,32,157,32,31,32,31,32,31,32,31,32,31,32,31,32,31,32,62,64,62,64,720";
+        case IRCommandMarantzInputVcr:
+            return @"36000,1,1,32,31,32,31,64,31,32,63,64,63,32,31,32,31,32,31,32,31,32,31,32,31,32,720";
+        case IRCommandMarantzInputDss:
+            return @"36000,1,1,32,32,64,32,32,32,32,64,32,32,64,65,32,32,32,32,32,32,32,32,32,32,32,720";
+        case IRCommandMarantzInputCd:
+            return @"36000,1,1,32,31,32,31,32,31,64,63,64,31,32,63,32,31,32,31,32,31,32,31,32,31,32,720";
+        case IRCommandMarantzInputCdr:
+            return @"36000,1,1,32,31,32,31,32,31,32,31,64,62,64,62,32,31,32,31,32,31,32,31,32,31,32,720";
+        case IRCommandMarantzInputTape:
+            return @"36000,1,1,32,31,32,31,32,31,64,31,32,62,64,63,32,31,32,31,32,31,32,31,32,31,32,720";
         default:
             return @"36000,1,1,32,31,32,31,32,31,64,31,32,31,32,31,32,192,64,31,32,63,64,64,32,31,64,64,64,63,64,720";
     }

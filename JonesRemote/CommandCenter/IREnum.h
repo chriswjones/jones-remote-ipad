@@ -13,7 +13,14 @@ NS_ENUM(int, IRCommand) {
     IRCommandNightMode, IRCommandPreviousChannel, IRCommandBackSixSec, IRCommandBackFifteenSec, IRCommandForwardThirtySec, IRCommandGuidePlaylistOptions, IRCommandRedDot,
     IRCommandBassPlus, IRCommandBassMinus, IRCommandTreblePlus, IRCommandTrebleMinus,
     IRCommandSurroundModeAuto, IRCommandSurroundModeDolby, IRCommandSurroundModeDTS, IRCommandSurroundModePureDirect, IRCommandSurroundModeMultiChannel, IRCommandSurroundModeStereo, IRCommandSurroundModeVirtual, IRCommandSurroundModeCircle,
-    IRCommandEmpty
+    IRCommandEmpty,
+    IRCommandMarantzInputTv,
+    IRCommandMarantzInputDvd,
+    IRCommandMarantzInputVcr,
+    IRCommandMarantzInputDss,
+    IRCommandMarantzInputCd,
+    IRCommandMarantzInputCdr,
+    IRCommandMarantzInputTape,
 };
 
 static inline NSString *stringForIRCommand(enum IRCommand irCommand) {

@@ -299,7 +299,7 @@ static CGFloat settingsBtnWidth = 150.0;
         [defaults setObject:@(InputDeviceTimeWarnerDvr1) forKey:stringForOutputDevice(OutputDeviceCenterTv)];
         [defaults setObject:@(InputDeviceTimeWarnerBox) forKey:stringForOutputDevice(OutputDeviceRightTv)];
         [defaults synchronize];
-            }else {
+    } else {
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand0 toIRDevice:IRDeviceTimeWarnerDvr1];
         [[CommandCenter singleton] sendQueableIRCommand:IRCommand1 toIRDevice:IRDeviceTimeWarnerDvr1];

@@ -12,6 +12,7 @@
 #import "FooterViewController.h"
 #import "MatrixEnum.h"
 #import "CommandCenter.h"
+#import "Marantz.h"
 
 static CGFloat zoneBtnWidth = 160.0;
 static CGFloat inputBtnWidth = 150.0;
@@ -131,6 +132,7 @@ static CGFloat iconBtnWidth = 100.0;
 }
 
 - (void)bindInput:(enum InputDevice)input {
+    [Marantz routeAudio:input];
     [[CommandCenter singleton] setMatrixInput:input toOutput:_outputDevice];
 }
 

@@ -14,6 +14,7 @@
 #import "TimeWarnerRemoteViewController.h"
 #import "BluRayRemoteViewController.h"
 #import "DirecTvRemoteViewController.h"
+#import "Marantz.h"
 
 static CGFloat padding = 10.0;
 
@@ -175,7 +176,7 @@ static CGFloat padding = 10.0;
 
             if (_outputDevice == OutputDeviceCenterTv) {
                 // Zone 1 mirrors center tv input
-                [[CommandCenter singleton] setMatrixInput:input toOutput:OutputDeviceAudioZone1];
+                [Marantz routeAudio:input];
                 [[CommandCenter singleton] sendQueableIRCommand:input == InputDeviceNone ? IRCommandPowerOff : IRCommandPowerOn toIRDevice:IRDeviceCenterTv];
             } else if (_outputDevice == OutputDeviceLeftTv) {
                 [[CommandCenter singleton] sendQueableIRCommand:input == InputDeviceNone ? IRCommandPowerOff : IRCommandPowerOn toIRDevice:IRDeviceLeftTv];
