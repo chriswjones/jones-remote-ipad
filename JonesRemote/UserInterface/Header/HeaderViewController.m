@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "Scene.h"
 #import "CommandCenter.h"
+#import "Marantz.h"
 
 static CGFloat settingsBtnWidth = 150.0;
 
@@ -377,6 +378,7 @@ static CGFloat settingsBtnWidth = 150.0;
     [defaults setObject:@(curCenterInput) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
     [defaults synchronize];
 
+    [Marantz routeAudio:curLeftInput];
     [[CommandCenter singleton] setMatrixInput:curLeftInput toOutput:OutputDeviceAudioZone1];
     [[CommandCenter singleton] setMatrixInput:curLeftInput toOutput:OutputDeviceCenterTv];
     [[CommandCenter singleton] setMatrixInput:curCenterInput toOutput:OutputDeviceLeftTv];
@@ -393,6 +395,7 @@ static CGFloat settingsBtnWidth = 150.0;
     [defaults setObject:@(curCenterInput) forKey:stringForOutputDevice(OutputDeviceRightTv)];
     [defaults synchronize];
 
+    [Marantz routeAudio:curRightInput];
     [[CommandCenter singleton] setMatrixInput:curRightInput toOutput:OutputDeviceAudioZone1];
     [[CommandCenter singleton] setMatrixInput:curRightInput toOutput:OutputDeviceCenterTv];
     [[CommandCenter singleton] setMatrixInput:curCenterInput toOutput:OutputDeviceRightTv];
@@ -409,6 +412,7 @@ static CGFloat settingsBtnWidth = 150.0;
     [defaults setObject:@(curCenterInput) forKey:stringForOutputDevice(OutputDeviceLeftTv)];
     [defaults synchronize];
 
+    [Marantz routeAudio:curLeftInput];
     [[CommandCenter singleton] setMatrixInput:curLeftInput toOutput:OutputDeviceAudioZone1];
     [[CommandCenter singleton] setMatrixInput:curLeftInput toOutput:OutputDeviceCenterTv];
     [[CommandCenter singleton] setMatrixInput:curCenterInput toOutput:OutputDeviceLeftTv];
@@ -425,6 +429,7 @@ static CGFloat settingsBtnWidth = 150.0;
     [defaults setObject:@(curCenterInput) forKey:stringForOutputDevice(OutputDeviceRightTv)];
     [defaults synchronize];
 
+    [Marantz routeAudio:curRightInput];
     [[CommandCenter singleton] setMatrixInput:curRightInput toOutput:OutputDeviceAudioZone1];
     [[CommandCenter singleton] setMatrixInput:curRightInput toOutput:OutputDeviceCenterTv];
     [[CommandCenter singleton] setMatrixInput:curCenterInput toOutput:OutputDeviceRightTv];
